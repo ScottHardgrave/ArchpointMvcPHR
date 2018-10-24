@@ -1,0 +1,189 @@
+﻿@model ArchpointMvcPHR.Models.LegalDocument
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>LegalDocument</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Will)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Will)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WillDateSigned)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WillDateSigned)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WillLastUpdated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WillLastUpdated)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WillCopy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WillCopy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FamilyAware)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FamilyAware)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MedPowerOfAttorney)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedPowerOfAttorney)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MedPowerOfAttorneyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedPowerOfAttorneyName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateMedPowerOfAttorney)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateMedPowerOfAttorney)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateUpdatedMedPowerOfAttorney)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateUpdatedMedPowerOfAttorney)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MedPowerOfAttorneyCopyOnFile)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedPowerOfAttorneyCopyOnFile)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HealthCareProxy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HealthCareProxy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HealthCareProxyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HealthCareProxyName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HealthCareProxyDateSign)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HealthCareProxyDateSign)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HealthCareProxyLastUpdate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HealthCareProxyLastUpdate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DoNotResuscitate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DoNotResuscitate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DnrDateSign)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DnrDateSign)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DnrDateUpdate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DnrDateUpdate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganDonorDocument)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OrganDonorDocument)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganDonorDocumentDateSign)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OrganDonorDocumentDateSign)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganDonorDocumentLastUpdate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OrganDonorDocumentLastUpdate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DocumentLocation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DocumentLocation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DocumentContactFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DocumentContactFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DocumentContactLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DocumentContactLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DocumentContactPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DocumentContactPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AttorneyFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AttorneyFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AttorneyLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AttorneyLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AttorneyPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AttorneyPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
