@@ -19,5 +19,7 @@ namespace ArchpointMvcPHR.Models
         public DbSet<ArchpointMvcPHR.Models.LegalDocument> LegalDocument { get; set; }
 
         public DbSet<ArchpointMvcPHR.Models.PersonalInfo> PersonalInfo { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.Insurance> Insurance { get; set; }
     }
 }
