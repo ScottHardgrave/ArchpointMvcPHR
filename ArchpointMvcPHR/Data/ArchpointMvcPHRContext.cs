@@ -29,5 +29,7 @@ namespace ArchpointMvcPHR.Models
         public DbSet<ArchpointMvcPHR.Models.MedicalProvider> MedicalProvider { get; set; }
 
         public DbSet<ArchpointMvcPHR.Models.DoctorAppointment> DoctorAppointment { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.MedicalHistory> MedicalHistory { get; set; }
     }
 }
