@@ -25,5 +25,11 @@ namespace ArchpointMvcPHR.Models
         public DbSet<ArchpointMvcPHR.Models.Employment> Employment { get; set; }
 
         public DbSet<ArchpointMvcPHR.Models.EmergencyContact> EmergencyContact { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.MedicalProvider> MedicalProvider { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.DoctorAppointment> DoctorAppointment { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.MedicalHistory> MedicalHistory { get; set; }
     }
 }

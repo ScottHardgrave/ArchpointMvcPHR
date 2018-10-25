@@ -1,0 +1,79 @@
+﻿@model ArchpointMvcPHR.Models.DoctorAppointment
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>DoctorAppointment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="ApptDate" class="control-label"></label>
+                <input asp-for="ApptDate" class="form-control" />
+                <span asp-validation-for="ApptDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MedicalProviderId" class="control-label"></label>
+                <input asp-for="MedicalProviderId" class="form-control" />
+                <span asp-validation-for="MedicalProviderId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReasonForVisit" class="control-label"></label>
+                <input asp-for="ReasonForVisit" class="form-control" />
+                <span asp-validation-for="ReasonForVisit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SymptomComplaint" class="control-label"></label>
+                <input asp-for="SymptomComplaint" class="form-control" />
+                <span asp-validation-for="SymptomComplaint" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FacilityName" class="control-label"></label>
+                <input asp-for="FacilityName" class="form-control" />
+                <span asp-validation-for="FacilityName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fax" class="control-label"></label>
+                <input asp-for="Fax" class="form-control" />
+                <span asp-validation-for="Fax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comments" class="control-label"></label>
+                <input asp-for="Comments" class="form-control" />
+                <span asp-validation-for="Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RemindMe" class="control-label"></label>
+                <input asp-for="RemindMe" class="form-control" />
+                <span asp-validation-for="RemindMe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
