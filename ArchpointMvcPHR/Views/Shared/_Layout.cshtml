@@ -1,14 +1,18 @@
 ﻿<!DOCTYPE html>
 <style>
+    .wrapper{
+        width:16.2%;
+    }
     .sidebar-nav {
         height: 100%;
         position: absolute;
-        top: 0px;
-        width: 260px;
-        margin: 0;
+        top: 50px;
+        width: 16.2%;
+        margin-right: 10px;
         padding: 0;
         list-style: none;
         background-color: #1299F2;
+        left:auto;
     }
 
     .navbar {
@@ -75,6 +79,8 @@
         font-size: 19px;
         transition: 0.4s;
         border: none;
+        
+
     }
 
     .panel {
@@ -86,6 +92,7 @@
         overflow: hidden;
         transition: max-height 0.2s ease-out;
     }
+
 
 </style>
 <html>
@@ -118,20 +125,23 @@
             </button>
             <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Archpoint PHR</a>
         </div>
-            <div class="container">
-                <partial name="_LoginPartial" />
-            </div>
-</nav>
-    <div id="wrapper">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                
+            </ul>
+            <partial name="_LoginPartial" />
+        </div>
+    </nav>
+    
 
+    <div id="wrapper">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a asp-area="" asp-controller="Medications" asp-action="Index">Archpoint PHR</a>
-                </li>
+                
                 <li>
-                    <a class="button " href="#">Create New Health Record</a>
+                   
+                    <a class="button " href="/CreateNewHealthRecord">Create New Health Record</a>
                     <div class="panel">
 
                     </div>
@@ -202,7 +212,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - ArchpointMvcPHR</p>
+            
         </footer>
     </div>
 
