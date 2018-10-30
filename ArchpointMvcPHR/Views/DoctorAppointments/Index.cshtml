@@ -1,0 +1,89 @@
+﻿@model IEnumerable<ArchpointMvcPHR.Models.DoctorAppointment>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ApptDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicalProviderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReasonForVisit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SymptomComplaint)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FacilityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RemindMe)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApptDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicalProviderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReasonForVisit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SymptomComplaint)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FacilityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RemindMe)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

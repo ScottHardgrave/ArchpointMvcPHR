@@ -18,6 +18,18 @@ namespace ArchpointMvcPHR.Models
 
         public DbSet<ArchpointMvcPHR.Models.LegalDocument> LegalDocument { get; set; }
 
-        public DbSet<ArchpointMvcPHR.Models.FamilyHistory> FamilyHistory { get; set; }
+        public DbSet<ArchpointMvcPHR.Models.PersonalInfo> PersonalInfo { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.Insurance> Insurance { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.Employment> Employment { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.EmergencyContact> EmergencyContact { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.MedicalProvider> MedicalProvider { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.DoctorAppointment> DoctorAppointment { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.MedicalHistory> MedicalHistory { get; set; }
     }
 }

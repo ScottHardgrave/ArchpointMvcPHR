@@ -1,4 +1,100 @@
 ﻿<!DOCTYPE html>
+<style>
+    .wrapper{
+        width:16.2%;
+    }
+    .sidebar-nav {
+        height: 100%;
+        position: absolute;
+        top: 50px;
+        width: 16.2%;
+        margin-right: 10px;
+        padding: 0;
+        list-style: none;
+        background-color: #1299F2;
+        left:auto;
+    }
+
+    .navbar {
+        top: -50px;
+    }
+
+    .navbar-nav {
+        font-size: 18px;
+    }
+
+    .navbar-collapse {
+        background-color: #22221D;
+    }
+
+    .sidebar-nav li {
+        font-size: 19px;
+        text-indent: 18px;
+        line-height: 50px;
+    }
+
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color: #000000;
+        }
+
+            .sidebar-nav li a:hover {
+                text-decoration: none;
+                color: #000000;
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+            .sidebar-nav li a:active, .sidebar-nav li a:focus {
+                color: #000000;
+                text-decoration: none;
+            }
+
+    .sidebar-nav > .sidebar-brand {
+        height: 65px;
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+        .sidebar-nav > .sidebar-brand a {
+            color: #000;
+        }
+
+            .sidebar-nav > .sidebar-brand a:hover {
+                color: #000000;
+                background: linear-gradient();
+            }
+
+    .accordion {
+        background-color: #1299F2;
+        color: #000;
+        font-size: 19px;
+        transition: 0.4s;
+        border: none;
+    }
+
+    .button {
+        background-color: #1299F2;
+        color: #000;
+        font-size: 19px;
+        transition: 0.4s;
+        border: none;
+        
+
+    }
+
+    .panel {
+        text-indent: 50px;
+        padding: inherit;
+        font-size: 14px;
+        background-color: #000000;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+
+
+</style>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -17,27 +113,98 @@
     </environment>
 </head>
 <body>
+
+
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Medications" asp-action="Index" class="navbar-brand">Archpoint PHR</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
-                <partial name="_LoginPartial" />
-            </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Archpoint PHR</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                
+            </ul>
+            <partial name="_LoginPartial" />
         </div>
     </nav>
+    
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                
+                <li>
+                   
+                    <a class="button " href="/CreateNewHealthRecord">Create New Health Record</a>
+                    <div class="panel">
+
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion">Medical History</button>
+                    <div class="panel">
+                        <a href="#">Allergy History</a>
+                        <a href="#">Cancer History</a>
+                        <a href="#">ENT History</a>
+                        <a href="#">Eye History</a>
+                        <a href="#">Family Medical History</a>
+                        <a href="#">Heart History</a>
+                        <a href="#">Medications</a>
+                        <a href="#">Mental Health Status</a>
+                        <a href="#">Mens Health History</a>
+                        <a href="#">STD History</a>
+                        <a href="#">Womens Health History</a>
+
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Medical Quick Card</a>
+                    <div class="panel">
+
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion">Personal Information</button>
+                    <div class="panel">
+                        <a href="#">Caregivers</a>
+                        <a href="#">Doctor Visits</a>
+                        <a href="#">Insurance Information</a>
+                        <a href="#">Immunizations</a>
+                        <a href="#">Legal Documents</a>
+                        <a href="#">Medical Provider</a>
+                        <a href="#">Travel Health</a>
+
+                    </div>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                    <div class="panel">
+
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Filler</a>
+                    <div class="panel">
+
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                    <div class="panel">
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+    </div>
+
 
     <partial name="_CookieConsentPartial" />
 
@@ -45,7 +212,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - ArchpointMvcPHR</p>
+            
         </footer>
     </div>
 
@@ -69,6 +236,23 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
 
     @RenderSection("Scripts", required: false)
 </body>
