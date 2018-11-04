@@ -9,11 +9,11 @@ using ArchpointMvcPHR.Models;
 
 namespace ArchpointMvcPHR.Controllers
 {
-    public class FamilyHistoriesController : Controller
+    public class FamilyHistoryController : Controller
     {
         private readonly ArchpointMvcPHRContext _context;
 
-        public FamilyHistoriesController(ArchpointMvcPHRContext context)
+        public FamilyHistoryController(ArchpointMvcPHRContext context)
         {
             _context = context;
         }

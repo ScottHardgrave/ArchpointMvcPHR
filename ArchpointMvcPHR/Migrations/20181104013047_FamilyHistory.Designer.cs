@@ -4,14 +4,16 @@ using ArchpointMvcPHR.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ArchpointMvcPHR.Migrations
 {
     [DbContext(typeof(ArchpointMvcPHRContext))]
-    partial class ArchpointMvcPHRContextModelSnapshot : ModelSnapshot
+    [Migration("20181104013047_FamilyHistory")]
+    partial class FamilyHistory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
