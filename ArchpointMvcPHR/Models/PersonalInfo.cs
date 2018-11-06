@@ -35,6 +35,7 @@ namespace ArchpointMvcPHR.Models
         public string BloodType { get; set; }
 
         [Display(Name = "Date of Birth")]
+        [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Required]
         public DateTime DateOfBirth { get; set; }
@@ -69,10 +70,12 @@ namespace ArchpointMvcPHR.Models
 
         [Display(Name = "Home Phone #")]
         [StringLength(20, MinimumLength = 1)]
+        [DataType(DataType.PhoneNumber)]
         public string HomePhone { get; set; }
 
         [Display(Name = "Cell Phone #")]
         [StringLength(20, MinimumLength = 1)]
+        [DataType(DataType.PhoneNumber)]
         [Required]
         public string CellPhone { get; set; }
 

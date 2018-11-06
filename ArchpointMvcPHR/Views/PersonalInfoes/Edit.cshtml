@@ -3,10 +3,16 @@
 @{
     ViewData["Title"] = "Edit";
 }
+<style>
+    .row{
+        margin-left:40%;
+    }
+</style>
 
-<h2>Edit</h2>
+<center><h2>Edit</h2>
 
 <h4>PersonalInfo</h4>
+</center>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -104,10 +110,11 @@
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+<center>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</center>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -3,10 +3,17 @@
 @{
     ViewData["Title"] = "Index";
 }
+<style>
+    .table{
+        margin-left:7%;
+    }
+    .para{
+        margin-left:9%;
+    }
+</style>
+<center><h2>Personal Information</h2></center>
 
-<h2>Index</h2>
-
-<p>
+<p class="para">
     <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
@@ -121,8 +128,8 @@
                 @Html.DisplayFor(modelItem => item.Religion)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>

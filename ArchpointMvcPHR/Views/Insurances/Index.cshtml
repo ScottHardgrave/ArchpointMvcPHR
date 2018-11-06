@@ -4,146 +4,159 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.PrimaryOrSecondary)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InsuranceName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InsurancePhoneNum)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InsuranceStreetAddress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InsuranceCity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InsuranceState)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InsuranceCountry)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PolicyIdNo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GroupNo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PlanEffectiveDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AuthorizationPhoneNum)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MedicareClaimNum)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MedicaidClaimNum)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MedicareMedicaidEffectiveDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PolicyHolderFirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PolicyHolderMidInit)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PolicyHolderLastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RelationshipToPolicyHolder)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateOfBirth)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SocialSecurityNo)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.PrimaryOrSecondary)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InsuranceName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InsurancePhoneNum)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InsuranceStreetAddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InsuranceCity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InsuranceState)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InsuranceCountry)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PolicyIdNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GroupNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PlanEffectiveDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AuthorizationPhoneNum)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MedicareClaimNum)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MedicaidClaimNum)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MedicareMedicaidEffectiveDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PolicyHolderFirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PolicyHolderMidInit)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PolicyHolderLastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RelationshipToPolicyHolder)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateOfBirth)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SocialSecurityNo)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<style>
+    .table {
+        margin-left: 15%;
+    }
+</style>
+<center>
+    <h2>Insurance</h2>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    </center>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryOrSecondary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InsuranceName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InsurancePhoneNum)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InsuranceStreetAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InsuranceCity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InsuranceState)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InsuranceCountry)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PolicyIdNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GroupNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PlanEffectiveDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AuthorizationPhoneNum)
+                </th>
+                <!--
+    <th>
+        @Html.DisplayNameFor(model => model.MedicareClaimNum)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.MedicaidClaimNum)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.MedicareMedicaidEffectiveDate)
+    </th>
+
+    <th>
+        @Html.DisplayNameFor(model => model.PolicyHolderFirstName)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.PolicyHolderMidInit)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.PolicyHolderLastName)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.RelationshipToPolicyHolder)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.DateOfBirth)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.SocialSecurityNo)
+    </th>
+    <th></th>
+        -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PrimaryOrSecondary)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InsuranceName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InsurancePhoneNum)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InsuranceStreetAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InsuranceCity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InsuranceState)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InsuranceCountry)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PolicyIdNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GroupNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PlanEffectiveDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AuthorizationPhoneNum)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MedicareClaimNum)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MedicaidClaimNum)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MedicareMedicaidEffectiveDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PolicyHolderFirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PolicyHolderMidInit)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PolicyHolderLastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RelationshipToPolicyHolder)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateOfBirth)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SocialSecurityNo)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

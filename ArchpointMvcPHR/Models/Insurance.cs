@@ -57,11 +57,12 @@ namespace ArchpointMvcPHR.Models
 
         [Display(Name = "Plan Effective Date")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        [StringLength(20, MinimumLength = 5)]
+        [DataType(DataType.Date)]
         [Required]
         public DateTime PlanEffectiveDate { get; set; }
 
         [Display(Name = "Authorization Phone No")]
+        [DataType(DataType.PhoneNumber)]
         [StringLength(20, MinimumLength = 1)]
         [Required]
         public string AuthorizationPhoneNum { get; set; }
@@ -74,7 +75,7 @@ namespace ArchpointMvcPHR.Models
 
         [Display(Name = "Medicare/Medicaid Effective Date")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        [StringLength(20, MinimumLength = 5)]
+        [DataType(DataType.Date)]
         public DateTime MedicareMedicaidEffectiveDate { get; set; }
 
         [Display(Name = "Policy Holder First Name")]
@@ -99,7 +100,7 @@ namespace ArchpointMvcPHR.Models
 
         [Display(Name = "Date of Birth")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        [StringLength(20, MinimumLength = 5)]
+        [DataType(DataType.Date)]
         [Required]
         public DateTime DateOfBirth { get; set; }
 

@@ -4,194 +4,203 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<style>
+    .table {
+        margin-left: 15%;
+    }
+</style>
+<center>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Will)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WillDateSigned)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WillLastUpdated)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WillCopy)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FamilyAware)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MedPowerOfAttorney)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MedPowerOfAttorneyName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateMedPowerOfAttorney)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateUpdatedMedPowerOfAttorney)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MedPowerOfAttorneyCopyOnFile)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HealthCareProxy)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HealthCareProxyName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HealthCareProxyDateSign)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HealthCareProxyLastUpdate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DoNotResuscitate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DnrDateSign)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DnrDateUpdate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OrganDonorDocument)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OrganDonorDocumentDateSign)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OrganDonorDocumentLastUpdate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DocumentLocation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DocumentContactFirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DocumentContactLastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DocumentContactPhone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AttorneyFirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AttorneyLastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AttorneyPhone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Comments)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Will)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WillDateSigned)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WillLastUpdated)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WillCopy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FamilyAware)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MedPowerOfAttorney)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MedPowerOfAttorneyName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateMedPowerOfAttorney)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateUpdatedMedPowerOfAttorney)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MedPowerOfAttorneyCopyOnFile)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HealthCareProxy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HealthCareProxyName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HealthCareProxyDateSign)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HealthCareProxyLastUpdate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DoNotResuscitate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DnrDateSign)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DnrDateUpdate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrganDonorDocument)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrganDonorDocumentDateSign)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrganDonorDocumentLastUpdate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DocumentLocation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DocumentContactFirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DocumentContactLastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DocumentContactPhone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AttorneyFirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AttorneyLastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AttorneyPhone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Comments)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <h2>Legal Documents</h2>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    </center>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Will)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WillDateSigned)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WillLastUpdated)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WillCopy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FamilyAware)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MedPowerOfAttorney)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MedPowerOfAttorneyName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateMedPowerOfAttorney)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateUpdatedMedPowerOfAttorney)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MedPowerOfAttorneyCopyOnFile)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HealthCareProxy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HealthCareProxyName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HealthCareProxyDateSign)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HealthCareProxyLastUpdate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DoNotResuscitate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DnrDateSign)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DnrDateUpdate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrganDonorDocument)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrganDonorDocumentDateSign)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrganDonorDocumentLastUpdate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DocumentLocation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DocumentContactFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DocumentContactLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DocumentContactPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AttorneyFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AttorneyLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AttorneyPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Comments)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Will)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WillDateSigned)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WillLastUpdated)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WillCopy)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FamilyAware)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MedPowerOfAttorney)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MedPowerOfAttorneyName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateMedPowerOfAttorney)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateUpdatedMedPowerOfAttorney)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MedPowerOfAttorneyCopyOnFile)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HealthCareProxy)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HealthCareProxyName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HealthCareProxyDateSign)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HealthCareProxyLastUpdate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DoNotResuscitate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DnrDateSign)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DnrDateUpdate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrganDonorDocument)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrganDonorDocumentDateSign)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrganDonorDocumentLastUpdate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DocumentLocation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DocumentContactFirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DocumentContactLastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DocumentContactPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AttorneyFirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AttorneyLastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AttorneyPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Comments)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

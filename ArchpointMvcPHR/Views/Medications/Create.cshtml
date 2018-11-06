@@ -3,10 +3,16 @@
 @{
     ViewData["Title"] = "Create";
 }
+<style>
+    .row{
+        margin-left:40%;
+    }
+</style>
+<center>
+    <h2>Create</h2>
 
-<h2>Create</h2>
-
-<h4>Medication</h4>
+    <h4>Medication</h4>
+</center>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -48,11 +54,11 @@
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
+<centeR>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</centeR>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

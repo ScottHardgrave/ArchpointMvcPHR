@@ -28,20 +28,24 @@ namespace ArchpointMvcPHR.Models
 
 
         [Display(Name = "Day Phone Num")]
+        [DataType(DataType.PhoneNumber)]
         [StringLength(20, MinimumLength = 1)]
         public string HomePhone { get; set; }
 
         [Display(Name = "Evening Phone Num")]
+        [DataType(DataType.PhoneNumber)]
         [StringLength(20, MinimumLength = 1)]
         public string EveningPhone { get; set; }
 
         [Display(Name = "Cell Phone Num")]
+        [DataType(DataType.PhoneNumber)]
         [StringLength(20, MinimumLength = 1)]
         [Required]
         public string CellPhone { get; set; }
 
 
         [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress)]
         [StringLength(80, MinimumLength = 1)]
         public string EmerContactEmail { get; set; }
 

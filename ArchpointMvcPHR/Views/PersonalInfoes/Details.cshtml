@@ -3,10 +3,14 @@
 @{
     ViewData["Title"] = "Details";
 }
+<style>
+    .row {
+        margin-left: 40%;
+    }
+</style>
+<center><h2>Details</h2></center>
 
-<h2>Details</h2>
-
-<div>
+<div class="row">
     <h4>PersonalInfo</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -114,7 +118,9 @@
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+<center>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+</center>

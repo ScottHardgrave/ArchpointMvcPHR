@@ -34,6 +34,7 @@ namespace ArchpointMvcPHR.Models
         public string ZipCode { get; set; }
 
         [Display(Name = "Phone Number")]
+        [DataType(DataType.PhoneNumber)]
         [StringLength(60, MinimumLength = 1)]
         [Required]
         public string PhoneNum { get; set; }

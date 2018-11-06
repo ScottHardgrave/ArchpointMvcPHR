@@ -16,7 +16,6 @@ namespace ArchpointMvcPHR.Models
         public DateTime ApptDate { get; set; }
 
         [Display(Name = "Medical Provider")]
-        [StringLength(80, MinimumLength = 1)]
         [Required]
         public int MedicalProviderId { get; set; }
 
@@ -36,6 +35,7 @@ namespace ArchpointMvcPHR.Models
         public string FacilityName { get; set; }
 
         [Display(Name = "Phone Number")]
+        [DataType(DataType.PhoneNumber)]
         [StringLength(20, MinimumLength = 1)]
         [Required]
         public string Phone { get; set; }

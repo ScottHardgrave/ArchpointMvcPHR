@@ -16,11 +16,13 @@ namespace ArchpointMvcPHR.Models
 
         [Display(Name = "Date signed:")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         [StringLength(60, MinimumLength = 5)]
         public DateTime WillDateSigned { get; set; }
 
         [Display(Name = "Last Updated:")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         [StringLength(60, MinimumLength = 5)]
         public DateTime WillLastUpdated { get; set; }
 
@@ -43,11 +45,13 @@ namespace ArchpointMvcPHR.Models
 
         [Display(Name = "Date Signed")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         [StringLength(60, MinimumLength = 5)]
         public DateTime DateMedPowerOfAttorney { get; set; }
 
         [Display(Name = "Last Updated:")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         [StringLength(60, MinimumLength = 5)]
         public DateTime DateUpdatedMedPowerOfAttorney { get; set; }
 
@@ -67,11 +71,13 @@ namespace ArchpointMvcPHR.Models
         [Display(Name = "Date Signed:")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [StringLength(60, MinimumLength = 5)]
+        [DataType(DataType.Date)]
         public DateTime HealthCareProxyDateSign { get; set; }
 
         [Display(Name = "Date Updated")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [StringLength(60, MinimumLength = 5)]
+        [DataType(DataType.Date)]
         public DateTime HealthCareProxyLastUpdate { get; set; }
 
         [Display(Name = "Do Not Resuscitate")]
@@ -81,11 +87,13 @@ namespace ArchpointMvcPHR.Models
 
         [Display(Name = "Date Signed")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         [StringLength(60, MinimumLength = 5)]
         public DateTime DnrDateSign { get; set; }
 
         [Display(Name = "Date Updated")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         [StringLength(60, MinimumLength = 5)]
         public DateTime DnrDateUpdate { get; set; }
 
@@ -99,11 +107,13 @@ namespace ArchpointMvcPHR.Models
 
         [Display(Name = "Date Signed")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         [StringLength(60, MinimumLength = 5)]
         public DateTime OrganDonorDocumentDateSign { get; set; }
 
         [Display(Name = "Date Updated")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         [StringLength(60, MinimumLength = 5)]
         public DateTime OrganDonorDocumentLastUpdate { get; set; }
 
@@ -123,6 +133,7 @@ namespace ArchpointMvcPHR.Models
         public string DocumentContactLastName { get; set; }
 
         [Display(Name = "Document Holder's Phone")]
+        [DataType(DataType.PhoneNumber)]
         [StringLength(60, MinimumLength = 5)]
         [Required]
         public string DocumentContactPhone { get; set; }
@@ -138,6 +149,7 @@ namespace ArchpointMvcPHR.Models
         public string AttorneyLastName { get; set; }
 
         [Display(Name = "Attorney Phone")]
+        [DataType(DataType.PhoneNumber)]
         [StringLength(60, MinimumLength = 5)]
         [Required]
         public string AttorneyPhone { get; set; }
