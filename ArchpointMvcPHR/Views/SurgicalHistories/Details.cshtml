@@ -1,0 +1,54 @@
+﻿@model ArchpointMvcPHR.Models.SurgicalHistory
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SurgicalHistory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SurgeryProcedure)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SurgeryProcedure)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfSurgeryProcedure)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateOfSurgeryProcedure)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MedProviderId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedProviderId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MedCareLocationId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedCareLocationId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProblemWithAnesthesia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProblemWithAnesthesia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnesthesiaProblemExplanation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnesthesiaProblemExplanation)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SurgicalHistoryId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

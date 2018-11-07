@@ -29,33 +29,33 @@ namespace ArchpointMvcPHR.Models
 
         [Display(Name = "Day Phone Num")]
         [DataType(DataType.PhoneNumber)]
-        [StringLength(20, MinimumLength = 1)]
+        [StringLength(32, MinimumLength = 1)]
         public string HomePhone { get; set; }
 
         [Display(Name = "Evening Phone Num")]
         [DataType(DataType.PhoneNumber)]
-        [StringLength(20, MinimumLength = 1)]
+        [StringLength(32, MinimumLength = 1)]
         public string EveningPhone { get; set; }
 
         [Display(Name = "Cell Phone Num")]
         [DataType(DataType.PhoneNumber)]
-        [StringLength(20, MinimumLength = 1)]
+        [StringLength(32, MinimumLength = 1)]
         [Required]
         public string CellPhone { get; set; }
 
 
         [Display(Name = "Email")]
         [DataType(DataType.EmailAddress)]
-        [StringLength(80, MinimumLength = 1)]
+        [StringLength(255, MinimumLength = 1)]
         public string EmerContactEmail { get; set; }
 
         [Display(Name = "Street Address")]
-        [StringLength(60, MinimumLength = 1)]
+        [StringLength(100, MinimumLength = 1)]
         [Required]
         public string EmerContactStreetAddress { get; set; }
 
         [Display(Name = "City")]
-        [StringLength(60, MinimumLength = 1)]
+        [StringLength(100, MinimumLength = 1)]
         [Required]
         public string EmerContactCity { get; set; }
 
@@ -66,6 +66,7 @@ namespace ArchpointMvcPHR.Models
 
         [Display(Name = "Zip Code")]
         [StringLength(20, MinimumLength = 5)]
+        [DataType(DataType.PostalCode)]
         [Required]
         public string EmerContactZip { get; set; }
 

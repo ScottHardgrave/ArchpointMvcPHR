@@ -227,19 +227,54 @@ body {
                 <li data-toggle="collapse" data-target="#products" class="collapsed active">
                     <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i> Medical History <span class="arrow"></span></a>
                 </li>
+
                 <ul class="sub-menu collapse" id="products">
-                    <li><a href="#">Allergy History</a></li>
-                    <li><a href="#">Cancer History</a></li>
-                    <li><a href="#">ENT History</a></li>
-                    <li><a href="#">Eye History</a></li>
-                    <li><a href="#">Family Medical History</a></li>
-                    <li><a href="#">Heart History</a></li>
-                    <li><a href="#">Medication</a></li>
-                    <li><a href="#">Mental Health Status</a></li>
-                    <li><a href="#">Mens Health History</a></li>
-                    <li><a href="#">STD History</a></li>
-                    <li><a href="#">Womens Health History</a></li>
+                    <li><a asp-area="" asp-controller="AllergyHistories">Allergy History</a></li>
+
+                    <li><a asp-area="" asp-controller="CancerHistories">Cancer History</a></li>
+                    
+                    <li><a asp-area="" asp-controller="ENTHistories">ENT History</a></li>
+                    
+                    <li><a asp-area="" asp-controller="EyeHistories">Eye History</a></li>
+
+                    <li><a asp-area="" asp-controller="FamilyHistory">Family History</a></li>
+
+                    <li><a asp-area="" asp-controller="HeartHistories">Heart History</a></li>
+
+                    <li><a asp-area="" asp-controller="MedicalHistories">Medical History</a></li>
+                    <li><a asp-area="" asp-controller="Medications">Medication History</a></li>
+
+                    <li><a asp-area="" asp-controller="AllergyHistories">Mens Health History</a></li>
+                    
+                    <li><a asp-area="" asp-controller="AllergyHistories">Mental Health Status</a></li>
+                    
+                    <li><a asp-area="" asp-controller="SurgicalHistories">Surgical History</a></li>
+                    <li><a asp-area="" asp-controller="StdHistories">STD History</a></li>
+
+                    <li><a asp-area="" asp-controller="AllergyHistories">Womens Health History</a></li>
+
                 </ul>
+
+
+                <li data-toggle="collapse" data-target="#risks" class="collapsed">
+                    <a href="#"> <i class="fa glyphicon-warning-sign" aria-hidden="true"></i>Medical Risks<span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="risks">
+                    <li><a asp-area="" asp-controller="A1CTestRisk">A1C Test Risks</a></li>
+                    <li><a asp-area="" asp-controller="AlcoholRisks">Alcohol Risks</a></li>
+                    <li><a asp-area="" asp-controller="AllergyHistories">Allergy Risks</a></li>
+                    <li><a asp-area="" asp-controller="AsthmaRisks">Asthma Risks</a></li>
+                    <li><a asp-area="" asp-controller="BloodPressureRisks">Blood Pressure Risks</a></li>
+                    <li><a asp-area="" asp-controller="CholesterolRisks">Cholesterol Risks</a></li>
+                    <li><a asp-area="" asp-controller="DiabetesRisks">Diabetes Risks</a></li>
+                    <li><a asp-area="" asp-controller="DrugUseRisks">Drug Risks</a></li>
+                    <li><a asp-area="" asp-controller="ExerciseActivityRisks">Exercise/Activity Risks</a></li>
+                    <li><a asp-area="" asp-controller="SmokingHistoryRisks">Smoking Risks</a></li>
+                    <li><a asp-area="" asp-controller="WeightAndMeasurementRisks">Weight and Measurement Risks</a></li>
+
+
+                </ul>
+
 
                 <li>
                     <a href="">
@@ -270,6 +305,12 @@ body {
                 <li>
                     <a href="">
                         <i class="fa fa-phone-square" aria-hidden="true"></i> Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <i class="fa fa-phone-square" aria-hidden="true"></i> Feedback
                     </a>
                 </li>
 

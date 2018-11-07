@@ -37,7 +37,7 @@ namespace ArchpointMvcPHR.Models
         public string TypeOfSpecialty { get; set; }
 
         [Display(Name = "Street Address")]
-        [StringLength(80, MinimumLength = 1)]
+        [StringLength(100, MinimumLength = 1)]
         [Required]
         public string StreetAddress { get; set; }
 
@@ -52,6 +52,7 @@ namespace ArchpointMvcPHR.Models
 
         [Display(Name = "Zip Code")]
         [StringLength(20, MinimumLength = 1)]
+        [DataType(DataType.PostalCode)]
         [Required]
         public string ZipCode { get; set; }
 
@@ -60,6 +61,7 @@ namespace ArchpointMvcPHR.Models
         public string Country { get; set; }
 
         [Display(Name = "Phone Num")]
+        [DataType(DataType.PhoneNumber)]
         [StringLength(20, MinimumLength = 1)]
         [Required]
         public string Phone { get; set; }
@@ -69,6 +71,7 @@ namespace ArchpointMvcPHR.Models
         public string Fax { get; set; }
 
         [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress)]
         [StringLength(80, MinimumLength = 1)]
         public string Email { get; set; }
     }

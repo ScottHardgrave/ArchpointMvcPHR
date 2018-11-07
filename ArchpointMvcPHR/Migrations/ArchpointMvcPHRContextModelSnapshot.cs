@@ -19,6 +19,288 @@ namespace ArchpointMvcPHR.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("ArchpointMvcPHR.Models.A1CTestRisk", b =>
+                {
+                    b.Property<int>("A1cTestRiskId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("A1cTargetRangeGoal")
+                        .HasMaxLength(60);
+
+                    b.Property<string>("A1cTestResults")
+                        .HasMaxLength(60);
+
+                    b.Property<string>("Comments");
+
+                    b.Property<DateTime>("DateEntered");
+
+                    b.Property<DateTime>("DateTested");
+
+                    b.HasKey("A1cTestRiskId");
+
+                    b.ToTable("A1CTestRisk");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.AlcoholRisk", b =>
+                {
+                    b.Property<int>("AlcoholRiskId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Comments");
+
+                    b.Property<string>("DailyDrinkCount");
+
+                    b.Property<string>("DrinkAlc")
+                        .IsRequired()
+                        .HasMaxLength(40);
+
+                    b.Property<string>("LengthOfTreatment");
+
+                    b.Property<string>("SocialDrinkCount");
+
+                    b.Property<string>("TreatedForAlcAbuse");
+
+                    b.Property<string>("TypeOfTreatment");
+
+                    b.Property<string>("WeekendDrinkCount");
+
+                    b.Property<DateTime>("YearTreated");
+
+                    b.Property<string>("YearsQuitDrinking");
+
+                    b.HasKey("AlcoholRiskId");
+
+                    b.ToTable("AlcoholRisk");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.AllergyHistory", b =>
+                {
+                    b.Property<int>("AllergyHistoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AirborneInhaledAllergen")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("Comments");
+
+                    b.Property<string>("ContactAllergen")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("DrugAllergen")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("InsectStingBites")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("MedTreatmentRequired")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("Severity")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("Symptoms")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("TypeOfReaction")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.HasKey("AllergyHistoryId");
+
+                    b.ToTable("AllergyHistory");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.AsthmaRisk", b =>
+                {
+                    b.Property<int>("AsthmaRiskId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AsthmaHospitalization")
+                        .IsRequired()
+                        .HasMaxLength(60);
+
+                    b.Property<DateTime>("AsthmaHospitalizationDate");
+
+                    b.Property<string>("AsthmaIcu")
+                        .IsRequired()
+                        .HasMaxLength(60);
+
+                    b.Property<string>("AsthmaSeverity")
+                        .IsRequired()
+                        .HasMaxLength(60);
+
+                    b.Property<string>("AsthmaSymptoms")
+                        .IsRequired()
+                        .HasMaxLength(60);
+
+                    b.Property<string>("AsthmaTriggers")
+                        .IsRequired()
+                        .HasMaxLength(60);
+
+                    b.Property<string>("Comments");
+
+                    b.Property<DateTime>("IcuAdmitDate");
+
+                    b.Property<string>("MedicationForAsthma")
+                        .IsRequired()
+                        .HasMaxLength(60);
+
+                    b.Property<string>("MedicationName")
+                        .IsRequired()
+                        .HasMaxLength(60);
+
+                    b.HasKey("AsthmaRiskId");
+
+                    b.ToTable("AsthmaRisk");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.BloodPressureRisk", b =>
+                {
+                    b.Property<int>("BloodPressureRiskId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Comments");
+
+                    b.Property<DateTime>("DateDateEntered");
+
+                    b.Property<DateTime>("DateTaken");
+
+                    b.Property<string>("DiastolicBpgoal")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("DiastolicPressure")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("PulseRate")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("SystolicBpgoal")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("SystolicPressure")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<TimeSpan>("TimeTaken");
+
+                    b.HasKey("BloodPressureRiskId");
+
+                    b.ToTable("BloodPressureRisk");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.CholesterolRisk", b =>
+                {
+                    b.Property<int>("CholesterolRiskId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Comments");
+
+                    b.Property<DateTime>("DateCholTaken");
+
+                    b.Property<string>("HdlCholGoal");
+
+                    b.Property<string>("HdlCholesterol")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<int>("LdlCholGoal");
+
+                    b.Property<string>("LdlCholesterol")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("TakenAfterFasting")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("TotalCholGoal");
+
+                    b.Property<string>("TotalCholesterol")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("TriglycerideGoal");
+
+                    b.Property<string>("Triglycerides")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.HasKey("CholesterolRiskId");
+
+                    b.ToTable("CholesterolRisk");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.DiabetesRisk", b =>
+                {
+                    b.Property<int>("DiabetesRiskId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Comments");
+
+                    b.Property<string>("DateSpan")
+                        .HasMaxLength(100);
+
+                    b.Property<DateTime>("DateTaken");
+
+                    b.Property<string>("LevelAfterBreakfast")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("LevelAfterDinner")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("LevelAfterLunch")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("LevelAtBedtime")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("LevelBeforeBreakfast")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("LevelBeforeDinner")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("LeverlBeforeLunch")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Medications")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("TargertGlucoseBeforeMealLow")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("TargetGlucoseAfterMealHigh")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("TargetGlucoseRangeAfterMealHigh")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("TargetGlucoseRangeAfterMealLow")
+                        .HasMaxLength(100);
+
+                    b.HasKey("DiabetesRiskId");
+
+                    b.ToTable("DiabetesRisk");
+                });
+
             modelBuilder.Entity("ArchpointMvcPHR.Models.DoctorAppointment", b =>
                 {
                     b.Property<string>("Id")
@@ -30,21 +312,20 @@ namespace ArchpointMvcPHR.Migrations
                     b.Property<string>("Comments");
 
                     b.Property<string>("Email")
-                        .HasMaxLength(80);
+                        .HasMaxLength(100);
 
                     b.Property<string>("FacilityName")
                         .IsRequired()
                         .HasMaxLength(80);
 
                     b.Property<string>("Fax")
-                        .HasMaxLength(40);
+                        .HasMaxLength(100);
 
-                    b.Property<int>("MedicalProviderId")
-                        .HasMaxLength(80);
+                    b.Property<int>("MedicalProviderId");
 
                     b.Property<string>("Phone")
                         .IsRequired()
-                        .HasMaxLength(20);
+                        .HasMaxLength(32);
 
                     b.Property<string>("ReasonForVisit")
                         .IsRequired()
@@ -63,6 +344,41 @@ namespace ArchpointMvcPHR.Migrations
                     b.ToTable("DoctorAppointment");
                 });
 
+            modelBuilder.Entity("ArchpointMvcPHR.Models.DrugUseRisk", b =>
+                {
+                    b.Property<int>("DrugUseRiskId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Comments");
+
+                    b.Property<string>("DrugsCausedLifeProblems");
+
+                    b.Property<string>("DrugsCausedProblemsExpl");
+
+                    b.Property<string>("FrequencyUsed");
+
+                    b.Property<string>("RecreationalDrugUser")
+                        .IsRequired()
+                        .HasMaxLength(60);
+
+                    b.Property<string>("TreatedForDrugAbuse");
+
+                    b.Property<string>("TreatmentLength");
+
+                    b.Property<string>("TypeOfTreatment");
+
+                    b.Property<DateTime>("YearTreated");
+
+                    b.Property<string>("YearsQuit");
+
+                    b.Property<string>("YearsUsed");
+
+                    b.HasKey("DrugUseRiskId");
+
+                    b.ToTable("DrugUseRisk");
+                });
+
             modelBuilder.Entity("ArchpointMvcPHR.Models.EmergencyContact", b =>
                 {
                     b.Property<int>("Id")
@@ -71,18 +387,18 @@ namespace ArchpointMvcPHR.Migrations
 
                     b.Property<string>("CellPhone")
                         .IsRequired()
-                        .HasMaxLength(20);
+                        .HasMaxLength(32);
 
                     b.Property<string>("EmerContactCity")
                         .IsRequired()
-                        .HasMaxLength(60);
+                        .HasMaxLength(100);
 
                     b.Property<string>("EmerContactCountry")
                         .IsRequired()
                         .HasMaxLength(60);
 
                     b.Property<string>("EmerContactEmail")
-                        .HasMaxLength(80);
+                        .HasMaxLength(255);
 
                     b.Property<string>("EmerContactStateProvince")
                         .IsRequired()
@@ -90,21 +406,21 @@ namespace ArchpointMvcPHR.Migrations
 
                     b.Property<string>("EmerContactStreetAddress")
                         .IsRequired()
-                        .HasMaxLength(60);
+                        .HasMaxLength(100);
 
                     b.Property<string>("EmerContactZip")
                         .IsRequired()
                         .HasMaxLength(20);
 
                     b.Property<string>("EveningPhone")
-                        .HasMaxLength(20);
+                        .HasMaxLength(32);
 
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasMaxLength(60);
 
                     b.Property<string>("HomePhone")
-                        .HasMaxLength(20);
+                        .HasMaxLength(32);
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -127,15 +443,15 @@ namespace ArchpointMvcPHR.Migrations
 
                     b.Property<string>("Address")
                         .IsRequired()
-                        .HasMaxLength(60);
+                        .HasMaxLength(100);
 
                     b.Property<string>("City")
                         .IsRequired()
-                        .HasMaxLength(60);
+                        .HasMaxLength(80);
 
                     b.Property<string>("EmployerName")
                         .IsRequired()
-                        .HasMaxLength(60);
+                        .HasMaxLength(100);
 
                     b.Property<string>("PhoneNum")
                         .IsRequired()
@@ -147,11 +463,38 @@ namespace ArchpointMvcPHR.Migrations
 
                     b.Property<string>("ZipCode")
                         .IsRequired()
-                        .HasMaxLength(15);
+                        .HasMaxLength(20);
 
                     b.HasKey("Id");
 
                     b.ToTable("Employment");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.ExerciseActivityRisk", b =>
+                {
+                    b.Property<int>("ExerciseActivityRiskId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AnyExercise")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("Comments");
+
+                    b.Property<string>("DurationGoal");
+
+                    b.Property<string>("DurationOfExercise");
+
+                    b.Property<string>("FrequencyOfExercise");
+
+                    b.Property<string>("IntensityLevel");
+
+                    b.Property<string>("TypeOfExercise");
+
+                    b.HasKey("ExerciseActivityRiskId");
+
+                    b.ToTable("ExerciseActivityRisk");
                 });
 
             modelBuilder.Entity("ArchpointMvcPHR.Models.FamilyHistory", b =>
@@ -163,8 +506,7 @@ namespace ArchpointMvcPHR.Migrations
                     b.Property<string>("CauseOfDeath")
                         .HasMaxLength(150);
 
-                    b.Property<string>("Comments")
-                        .HasMaxLength(500);
+                    b.Property<string>("Comments");
 
                     b.Property<string>("Disease")
                         .IsRequired();
@@ -173,14 +515,52 @@ namespace ArchpointMvcPHR.Migrations
                         .HasMaxLength(60);
 
                     b.Property<string>("FirstName")
-                        .HasMaxLength(60);
+                        .HasMaxLength(100);
 
                     b.Property<string>("LastName")
-                        .HasMaxLength(60);
+                        .HasMaxLength(100);
 
                     b.HasKey("ID");
 
                     b.ToTable("FamilyHistory");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.Feedback", b =>
+                {
+                    b.Property<int>("FeedbackId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("EasyToUnderstand");
+
+                    b.Property<string>("HowArchpointWasFound");
+
+                    b.Property<string>("SuggestionsForImprovements");
+
+                    b.HasKey("FeedbackId");
+
+                    b.ToTable("Feedback");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.Immunizations", b =>
+                {
+                    b.Property<int>("ImmunizationsId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AdministeredBy");
+
+                    b.Property<string>("Comments");
+
+                    b.Property<DateTime>("DateLastTetanus");
+
+                    b.Property<DateTime>("DateReceived");
+
+                    b.Property<string>("ImmunizationType");
+
+                    b.HasKey("ImmunizationsId");
+
+                    b.ToTable("Immunizations");
                 });
 
             modelBuilder.Entity("ArchpointMvcPHR.Models.Insurance", b =>
@@ -193,8 +573,7 @@ namespace ArchpointMvcPHR.Migrations
                         .IsRequired()
                         .HasMaxLength(20);
 
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasMaxLength(20);
+                    b.Property<DateTime>("DateOfBirth");
 
                     b.Property<string>("GroupNo")
                         .IsRequired()
@@ -228,11 +607,9 @@ namespace ArchpointMvcPHR.Migrations
 
                     b.Property<string>("MedicareClaimNum");
 
-                    b.Property<DateTime>("MedicareMedicaidEffectiveDate")
-                        .HasMaxLength(20);
+                    b.Property<DateTime>("MedicareMedicaidEffectiveDate");
 
-                    b.Property<DateTime>("PlanEffectiveDate")
-                        .HasMaxLength(20);
+                    b.Property<DateTime>("PlanEffectiveDate");
 
                     b.Property<string>("PolicyHolderFirstName")
                         .IsRequired()
@@ -374,6 +751,35 @@ namespace ArchpointMvcPHR.Migrations
                     b.ToTable("LegalDocument");
                 });
 
+            modelBuilder.Entity("ArchpointMvcPHR.Models.MedCareLocation", b =>
+                {
+                    b.Property<int>("MedCareLocationId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("LocationCity");
+
+                    b.Property<string>("LocationCountry");
+
+                    b.Property<string>("LocationEmail");
+
+                    b.Property<string>("LocationFax");
+
+                    b.Property<string>("LocationName");
+
+                    b.Property<string>("LocationPhoneNum");
+
+                    b.Property<string>("LocationStateProvince");
+
+                    b.Property<string>("LocationStreetAddress");
+
+                    b.Property<string>("LocationZipCode");
+
+                    b.HasKey("MedCareLocationId");
+
+                    b.ToTable("MedCareLocation");
+                });
+
             modelBuilder.Entity("ArchpointMvcPHR.Models.MedicalHistory", b =>
                 {
                     b.Property<int>("Id")
@@ -384,14 +790,11 @@ namespace ArchpointMvcPHR.Migrations
                         .IsRequired()
                         .HasMaxLength(10);
 
-                    b.Property<string>("Comments")
-                        .HasMaxLength(500);
+                    b.Property<string>("Comments");
 
-                    b.Property<DateTime>("DateOfDiagnosis")
-                        .HasMaxLength(80);
+                    b.Property<DateTime>("DateOfDiagnosis");
 
-                    b.Property<DateTime>("DateResolved")
-                        .HasMaxLength(80);
+                    b.Property<DateTime>("DateResolved");
 
                     b.Property<string>("DiseaseDisorder")
                         .IsRequired()
@@ -456,7 +859,7 @@ namespace ArchpointMvcPHR.Migrations
 
                     b.Property<string>("StreetAddress")
                         .IsRequired()
-                        .HasMaxLength(80);
+                        .HasMaxLength(100);
 
                     b.Property<string>("TypeOfSpecialty")
                         .IsRequired()
@@ -567,7 +970,7 @@ namespace ArchpointMvcPHR.Migrations
 
                     b.Property<string>("StreetAddress")
                         .IsRequired()
-                        .HasMaxLength(80);
+                        .HasMaxLength(100);
 
                     b.Property<string>("ZipCode")
                         .IsRequired()
@@ -576,6 +979,271 @@ namespace ArchpointMvcPHR.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PersonalInfo");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.SmokingHistoryRisk", b =>
+                {
+                    b.Property<int>("SmokingHistoryRiskId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AgeQuit");
+
+                    b.Property<string>("AgeStarted");
+
+                    b.Property<string>("ChewingSmokelessTobacco");
+
+                    b.Property<string>("QuittingGoal");
+
+                    b.Property<string>("Smoker")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.HasKey("SmokingHistoryRiskId");
+
+                    b.ToTable("SmokingHistoryRisk");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.StdHistory", b =>
+                {
+                    b.Property<int>("StdHistoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Comments");
+
+                    b.Property<DateTime>("StdDateOfDiagnosis");
+
+                    b.Property<DateTime>("StdDateResolved");
+
+                    b.Property<string>("StdMedication");
+
+                    b.Property<string>("StdStatus");
+
+                    b.Property<string>("StdType");
+
+                    b.HasKey("StdHistoryId");
+
+                    b.ToTable("StdHistory");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.SurgicalHistory", b =>
+                {
+                    b.Property<int>("SurgicalHistoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AnesthesiaProblemExplanation");
+
+                    b.Property<DateTime>("DateOfSurgeryProcedure");
+
+                    b.Property<string>("MedCareLocationId")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("MedProviderId")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("ProblemWithAnesthesia")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("SurgeryProcedure")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.HasKey("SurgicalHistoryId");
+
+                    b.ToTable("SurgicalHistory");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.TestsExams", b =>
+                {
+                    b.Property<int>("TestsExamsId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateOfTestExam");
+
+                    b.Property<string>("MedCareLocationId")
+                        .IsRequired();
+
+                    b.Property<string>("ReaonForTestExam")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("TestExamResult")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("TestExamType")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.HasKey("TestsExamsId");
+
+                    b.ToTable("TestsExams");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.TravelHealth", b =>
+                {
+                    b.Property<int>("TravelHealthId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Comments");
+
+                    b.Property<string>("CountryVisited")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<DateTime>("DateContracted");
+
+                    b.Property<DateTime>("DateVisited");
+
+                    b.Property<string>("DiseaseIllnessContracted")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.HasKey("TravelHealthId");
+
+                    b.ToTable("TravelHealth");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.User", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("EmailAddress")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.Property<string>("RelationshipToPatient")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("UserFirstName")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("UserLastName")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("User");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.WeightAndMeasurementRisk", b =>
+                {
+                    b.Property<int>("WeightAndMeasurementRiskId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Bmi");
+
+                    b.Property<string>("Comments");
+
+                    b.Property<string>("CurrentWaistSize");
+
+                    b.Property<DateTime>("DateTaken");
+
+                    b.Property<string>("Height");
+
+                    b.Property<string>("WaistSizeGoal");
+
+                    b.Property<string>("Weight");
+
+                    b.Property<string>("WeightGoal");
+
+                    b.HasKey("WeightAndMeasurementRiskId");
+
+                    b.ToTable("WeightAndMeasurementRisk");
+                });
+
+            modelBuilder.Entity("ArchpointMvcPHR.Models.WomensHealthHistory", b =>
+                {
+                    b.Property<int>("WomensHealthHistoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AgePeriodsStarted");
+
+                    b.Property<string>("BirthControlMethod");
+
+                    b.Property<DateTime>("DateLastClinicialBreastExam");
+
+                    b.Property<DateTime>("DateLastMammogram");
+
+                    b.Property<DateTime>("DateLastPapExam");
+
+                    b.Property<DateTime>("DateNextBreastExam");
+
+                    b.Property<DateTime>("DateNextMammogram");
+
+                    b.Property<DateTime>("DateNextPapExam");
+
+                    b.Property<DateTime>("DateOfDiagnosis");
+
+                    b.Property<DateTime>("DateOfSurgeryProcedure");
+
+                    b.Property<DateTime>("DateResolved");
+
+                    b.Property<string>("HormoneReplacementTherapy");
+
+                    b.Property<DateTime>("HrtDateStarted");
+
+                    b.Property<DateTime>("HrtDateStopped");
+
+                    b.Property<int>("MedCareProviderId");
+
+                    b.Property<string>("NumOfCsections");
+
+                    b.Property<string>("NumOfElectiveAbortions");
+
+                    b.Property<string>("NumOfLiveBirths");
+
+                    b.Property<string>("NumOfMiscarriages");
+
+                    b.Property<string>("NumOfPregnancies");
+
+                    b.Property<string>("NumOfPrematureBirths");
+
+                    b.Property<string>("NumOfStillBirths");
+
+                    b.Property<string>("PeriodFlow");
+
+                    b.Property<string>("PeriodProblems");
+
+                    b.Property<string>("PeriodsRegular");
+
+                    b.Property<string>("PregnancyComplications");
+
+                    b.Property<string>("ResultsLastBreastExam");
+
+                    b.Property<string>("ResultsLastMammogram");
+
+                    b.Property<string>("ResultsLastPapExam");
+
+                    b.Property<string>("StillHavingPeriods");
+
+                    b.Property<string>("WomensDiseaseDisorder");
+
+                    b.Property<string>("WomensDiseaseDisorderStatus");
+
+                    b.Property<string>("WomensHealthSurgeryProcedure");
+
+                    b.HasKey("WomensHealthHistoryId");
+
+                    b.ToTable("WomensHealthHistory");
                 });
 #pragma warning restore 612, 618
         }

@@ -16,7 +16,6 @@ namespace ArchpointMvcPHR.Models
         public string DiseaseDisorder { get; set; }
 
         [Display(Name = "Date of diagnosis")]
-        [StringLength(80, MinimumLength = 1)]
         [DataType(DataType.Date)]
         [Required]
         public DateTime DateOfDiagnosis { get; set; }
@@ -32,7 +31,6 @@ namespace ArchpointMvcPHR.Models
         public string Status { get; set; }
 
         [Display(Name = "Date Resolved")]
-        [StringLength(80, MinimumLength = 1)]
         [DataType(DataType.Date)]
         [Required]
         public DateTime DateResolved { get; set; }
@@ -43,7 +41,6 @@ namespace ArchpointMvcPHR.Models
         public string MedicalProviderId { get; set; }
 
 
-        [StringLength(500, MinimumLength = 1)]
         public string Comments { get; set; }
 
 

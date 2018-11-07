@@ -33,5 +33,47 @@ namespace ArchpointMvcPHR.Models
         public DbSet<ArchpointMvcPHR.Models.MedicalHistory> MedicalHistory { get; set; }
 
         public DbSet<ArchpointMvcPHR.Models.FamilyHistory> FamilyHistory { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.A1CTestRisk> A1CTestRisk { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.AlcoholRisk> AlcoholRisk { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.AllergyHistory> AllergyHistory { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.AsthmaRisk> AsthmaRisk { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.BloodPressureRisk> BloodPressureRisk { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.CholesterolRisk> CholesterolRisk { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.DiabetesRisk> DiabetesRisk { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.DrugUseRisk> DrugUseRisk { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.ExerciseActivityRisk> ExerciseActivityRisk { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.Feedback> Feedback { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.Immunizations> Immunizations { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.WomensHealthHistory> WomensHealthHistory { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.WeightAndMeasurementRisk> WeightAndMeasurementRisk { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.User> User { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.TravelHealth> TravelHealth { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.TestsExams> TestsExams { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.StdHistory> StdHistory { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.SurgicalHistory> SurgicalHistory { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.SmokingHistoryRisk> SmokingHistoryRisk { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.MedCareLocation> MedCareLocation { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.MensHealth> MensHealth { get; set; }
     }
 }

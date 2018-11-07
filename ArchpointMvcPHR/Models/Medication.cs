@@ -20,7 +20,9 @@ namespace ArchpointMvcPHR.Models
 
         [Range(1, 1000)]
         [Display(Name = "Quantity")]
+        /*
         [DataType(DataType.MultilineText)]
+        */
         public int Quantity { get; set; }
 
         //[RegularExpression(@"^[A-z]+[a-zA-Z0-9""'\s-]*$")]

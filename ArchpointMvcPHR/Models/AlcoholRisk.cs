@@ -8,7 +8,7 @@ namespace ArchpointMvcPHR.Models
 {
     public class AlcoholRisk
     {
-        public int AlcoholUseRiskId { get; set; }
+        public int AlcoholRiskId { get; set; }
 
         [Display(Name = "Drink Alcohol?")]
         [StringLength(40, MinimumLength = 1)]

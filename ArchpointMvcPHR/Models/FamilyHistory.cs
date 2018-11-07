@@ -11,7 +11,7 @@ namespace ArchpointMvcPHR.Models
         public int ID { get; set; }
 
         [Display(Name = "Family Member")]
-        [StringLength(60, MinimumLength = 15)]
+        [StringLength(60, MinimumLength = 1)]
         public string FamilyMember { get; set; }
 
         /* public string Aunt { get; set; }
@@ -29,22 +29,21 @@ namespace ArchpointMvcPHR.Models
         public string Uncle { get; set; }*/
 
         [Display(Name = "First Name")]
-        [StringLength(60, MinimumLength = 20 )]
+        [StringLength(100, MinimumLength = 1)]
         public string FirstName { get; set; }
 
         [Display(Name = "Last Name")]
-        [StringLength(60, MinimumLength = 20)]
+        [StringLength(100, MinimumLength = 1)]
         public string LastName { get; set; }
 
         [Required]
         public string Disease { get; set; }
 
         [Display(Name = "Cause Of Death ")]
-        [StringLength(150, MinimumLength = 50)]
+        [StringLength(150, MinimumLength = 1)]
         public string CauseOfDeath { get; set; }
 
         [Display(Name = "Comments")]
-        [StringLength(500, MinimumLength = 1)]
         public string Comments { get; set; }
 
 

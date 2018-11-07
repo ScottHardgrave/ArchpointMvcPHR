@@ -8,7 +8,7 @@ namespace ArchpointMvcPHR.Models
 {
     public class ExerciseActivityRisk
     {
-        public int ExerciseRiskId { get; set; }
+        public int ExerciseActivityRiskId { get; set; }
 
         [Display(Name = "Any exercise?")]
         [StringLength(80, MinimumLength = 1)]

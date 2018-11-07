@@ -8,7 +8,7 @@ namespace ArchpointMvcPHR.Models
 {
     public class WeightAndMeasurementRisk
     {
-        public int WeightMeasurementRiskId { get; set; }
+        public int WeightAndMeasurementRiskId { get; set; }
 
         [Display(Name = "Current Weight")]
         [DataType(DataType.Text)]

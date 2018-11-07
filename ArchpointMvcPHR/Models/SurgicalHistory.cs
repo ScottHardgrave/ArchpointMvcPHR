@@ -8,7 +8,7 @@ namespace ArchpointMvcPHR.Models
 {
     public class SurgicalHistory
     {
-        public int SurgeryHistoryId { get; set; }
+        public int SurgicalHistoryId { get; set; }
 
         [Display(Name = "Surgery Procedure")]
         [StringLength(80, MinimumLength = 1)]
