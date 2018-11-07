@@ -2,7 +2,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style>
     .nav-side-menu {
-        wrap
         white-space: nowrap;
         overflow: auto;
         font-family: verdana;
@@ -128,7 +127,7 @@
                     transition: all 1s ease;
                 }
 
- @@media (max-width: 1000px) {
+ @@media screen and (max-width: 1200px) {
 .nav-side-menu {
                 position: relative;
                 width: 100%;
@@ -157,7 +156,7 @@
             }
 }
 
-@@media (min-width: 1000px) {
+@@media screen and (min-width: 1200px) {
 .nav-side-menu .menu-list .menu-content {
                 display: block;
             }
@@ -168,8 +167,17 @@ body {
             padding: 0px;
         }
 .body1{
-    margin-left:325px;
+    margin-left:315px;
 }
+    .login {
+        font-family: FontAwesome;
+        content: "\f078";
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        vertical-align: middle;
+        float: left;
+    }
 </style>
 <html>
 <head>
@@ -262,6 +270,11 @@ body {
                     <a href="">
                         <i class="fa fa-phone-square" aria-hidden="true"></i> Contact
                     </a>
+                </li>
+
+                <li class="login">
+                    <partial name="_LoginPartial" />
+
                 </li>
 
 
