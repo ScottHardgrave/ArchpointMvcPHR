@@ -228,18 +228,51 @@ body {
                 </li>
 
                 <ul class="sub-menu collapse" id="products">
-                    <li><a href="#">Allergy History</a></li>
-                    <li><a href="#">Cancer History</a></li>
-                    <li><a href="#">ENT History</a></li>
-                    <li><a href="#">Eye History</a></li>
-                    <li><a href="#">Family Medical History</a></li>
-                    <li><a href="#">Heart History</a></li>
-                    <li><a href="#">Medication</a></li>
-                    <li><a href="#">Mental Health Status</a></li>
-                    <li><a href="#">Mens Health History</a></li>
-                    <li><a href="#">STD History</a></li>
-                    <li><a href="#">Womens Health History</a></li>
+                    <li><a asp-area="" asp-controller="AllergyHistories">Allergy History</a></li>
+                    <li><a asp-area="" asp-controller="CancerHistories">Cancer History</a></li>
+                    
+                    <li><a asp-area="" asp-controller="ENTHistories">ENT History</a></li>
+                    
+                    <li><a asp-area="" asp-controller="EyeHistories">Eye History</a></li>
+
+                    <li><a asp-area="" asp-controller="FamilyHistory">Family History</a></li>
+
+                    <li><a asp-area="" asp-controller="HeartHistories">Heart History</a></li>
+
+                    <li><a asp-area="" asp-controller="MedicalHistories">Medical History</a></li>
+                    <li><a asp-area="" asp-controller="Medications">Medication History</a></li>
+
+                    <li><a asp-area="" asp-controller="AllergyHistories">Mens Health History</a></li>
+                    
+                    <li><a asp-area="" asp-controller="AllergyHistories">Mental Health Status</a></li>
+                    
+                    <li><a asp-area="" asp-controller="SurgicalHistories">Surgical History</a></li>
+                    <li><a asp-area="" asp-controller="StdHistories">STD History</a></li>
+
+                    <li><a asp-area="" asp-controller="AllergyHistories">Womens Health History</a></li>
+
                 </ul>
+
+
+                <li data-toggle="collapse" data-target="#risks" class="collapsed">
+                    <a href="#"> <i class="fa glyphicon-warning-sign" aria-hidden="true"></i>Medical Risks<span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="risks">
+                    <li>A1C Test Risks</li>
+                    <li>Alcohol Risks</li>
+                    <li>Allergy Risks</li>
+                    <li>Asthma Risks</li>
+                    <li>Blood Pressure Risks</li>
+                    <li>Cholesterol Risks</li>
+                    <li>Diabetes Risks</li>
+                    <li>Drug Risks</li>
+                    <li>Exercise/Activity Risks</li>
+                    <li>Smoking Risks</li>
+                    <li>Weight and Measurement Risks</li>
+
+
+                </ul>
+
 
                 <li>
                     <a href="">
@@ -270,6 +303,12 @@ body {
                 <li>
                     <a href="">
                         <i class="fa fa-phone-square" aria-hidden="true"></i> Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <i class="fa fa-phone-square" aria-hidden="true"></i> Feedback
                     </a>
                 </li>
 
