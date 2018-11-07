@@ -8,7 +8,7 @@ namespace ArchpointMvcPHR.Models
 {
     public class TestsExams
     {
-        public int TestExamId { get; set; }
+        public int TestsExamsId { get; set; }
 
         [Display(Name = "Test/Exam given")]
         [StringLength(80, MinimumLength = 1)]

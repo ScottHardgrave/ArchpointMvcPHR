@@ -8,7 +8,7 @@ namespace ArchpointMvcPHR.Models
 {
     public class SmokingHistoryRisk
     {
-        public int SmokingHistRiskId { get; set; }
+        public int SmokingHistoryRiskId { get; set; }
 
         [Display(Name = "Smoker?")]
         [StringLength(20, MinimumLength = 1)]

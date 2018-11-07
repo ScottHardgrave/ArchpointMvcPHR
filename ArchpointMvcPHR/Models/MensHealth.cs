@@ -8,7 +8,7 @@ namespace ArchpointMvcPHR.Models
 {
     public class MensHealth
     {
-        public int MensHealthHistoryId { get; set; }
+        public int MensHealthId { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime DateLastAnnualPhysical { get; set; }

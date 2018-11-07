@@ -8,7 +8,7 @@ namespace ArchpointMvcPHR.Models
 {
     public class Immunizations
     {
-        public int ImmunizationId { get; set; }
+        public int ImmunizationsId { get; set; }
 
         [Display(Name = "Type of immunization?")]
         [DataType(DataType.Text)]

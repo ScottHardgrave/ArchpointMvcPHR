@@ -30,21 +30,20 @@ namespace ArchpointMvcPHR.Migrations
                     b.Property<string>("Comments");
 
                     b.Property<string>("Email")
-                        .HasMaxLength(80);
+                        .HasMaxLength(100);
 
                     b.Property<string>("FacilityName")
                         .IsRequired()
                         .HasMaxLength(80);
 
                     b.Property<string>("Fax")
-                        .HasMaxLength(40);
+                        .HasMaxLength(100);
 
-                    b.Property<int>("MedicalProviderId")
-                        .HasMaxLength(80);
+                    b.Property<int>("MedicalProviderId");
 
                     b.Property<string>("Phone")
                         .IsRequired()
-                        .HasMaxLength(20);
+                        .HasMaxLength(32);
 
                     b.Property<string>("ReasonForVisit")
                         .IsRequired()
@@ -71,18 +70,18 @@ namespace ArchpointMvcPHR.Migrations
 
                     b.Property<string>("CellPhone")
                         .IsRequired()
-                        .HasMaxLength(20);
+                        .HasMaxLength(32);
 
                     b.Property<string>("EmerContactCity")
                         .IsRequired()
-                        .HasMaxLength(60);
+                        .HasMaxLength(100);
 
                     b.Property<string>("EmerContactCountry")
                         .IsRequired()
                         .HasMaxLength(60);
 
                     b.Property<string>("EmerContactEmail")
-                        .HasMaxLength(80);
+                        .HasMaxLength(255);
 
                     b.Property<string>("EmerContactStateProvince")
                         .IsRequired()
@@ -90,21 +89,21 @@ namespace ArchpointMvcPHR.Migrations
 
                     b.Property<string>("EmerContactStreetAddress")
                         .IsRequired()
-                        .HasMaxLength(60);
+                        .HasMaxLength(100);
 
                     b.Property<string>("EmerContactZip")
                         .IsRequired()
                         .HasMaxLength(20);
 
                     b.Property<string>("EveningPhone")
-                        .HasMaxLength(20);
+                        .HasMaxLength(32);
 
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasMaxLength(60);
 
                     b.Property<string>("HomePhone")
-                        .HasMaxLength(20);
+                        .HasMaxLength(32);
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -127,15 +126,15 @@ namespace ArchpointMvcPHR.Migrations
 
                     b.Property<string>("Address")
                         .IsRequired()
-                        .HasMaxLength(60);
+                        .HasMaxLength(100);
 
                     b.Property<string>("City")
                         .IsRequired()
-                        .HasMaxLength(60);
+                        .HasMaxLength(80);
 
                     b.Property<string>("EmployerName")
                         .IsRequired()
-                        .HasMaxLength(60);
+                        .HasMaxLength(100);
 
                     b.Property<string>("PhoneNum")
                         .IsRequired()
@@ -147,7 +146,7 @@ namespace ArchpointMvcPHR.Migrations
 
                     b.Property<string>("ZipCode")
                         .IsRequired()
-                        .HasMaxLength(15);
+                        .HasMaxLength(20);
 
                     b.HasKey("Id");
 
@@ -163,8 +162,7 @@ namespace ArchpointMvcPHR.Migrations
                     b.Property<string>("CauseOfDeath")
                         .HasMaxLength(150);
 
-                    b.Property<string>("Comments")
-                        .HasMaxLength(500);
+                    b.Property<string>("Comments");
 
                     b.Property<string>("Disease")
                         .IsRequired();
@@ -173,10 +171,10 @@ namespace ArchpointMvcPHR.Migrations
                         .HasMaxLength(60);
 
                     b.Property<string>("FirstName")
-                        .HasMaxLength(60);
+                        .HasMaxLength(100);
 
                     b.Property<string>("LastName")
-                        .HasMaxLength(60);
+                        .HasMaxLength(100);
 
                     b.HasKey("ID");
 
@@ -193,8 +191,7 @@ namespace ArchpointMvcPHR.Migrations
                         .IsRequired()
                         .HasMaxLength(20);
 
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasMaxLength(20);
+                    b.Property<DateTime>("DateOfBirth");
 
                     b.Property<string>("GroupNo")
                         .IsRequired()
@@ -228,11 +225,9 @@ namespace ArchpointMvcPHR.Migrations
 
                     b.Property<string>("MedicareClaimNum");
 
-                    b.Property<DateTime>("MedicareMedicaidEffectiveDate")
-                        .HasMaxLength(20);
+                    b.Property<DateTime>("MedicareMedicaidEffectiveDate");
 
-                    b.Property<DateTime>("PlanEffectiveDate")
-                        .HasMaxLength(20);
+                    b.Property<DateTime>("PlanEffectiveDate");
 
                     b.Property<string>("PolicyHolderFirstName")
                         .IsRequired()
@@ -384,14 +379,11 @@ namespace ArchpointMvcPHR.Migrations
                         .IsRequired()
                         .HasMaxLength(10);
 
-                    b.Property<string>("Comments")
-                        .HasMaxLength(500);
+                    b.Property<string>("Comments");
 
-                    b.Property<DateTime>("DateOfDiagnosis")
-                        .HasMaxLength(80);
+                    b.Property<DateTime>("DateOfDiagnosis");
 
-                    b.Property<DateTime>("DateResolved")
-                        .HasMaxLength(80);
+                    b.Property<DateTime>("DateResolved");
 
                     b.Property<string>("DiseaseDisorder")
                         .IsRequired()
@@ -456,7 +448,7 @@ namespace ArchpointMvcPHR.Migrations
 
                     b.Property<string>("StreetAddress")
                         .IsRequired()
-                        .HasMaxLength(80);
+                        .HasMaxLength(100);
 
                     b.Property<string>("TypeOfSpecialty")
                         .IsRequired()
@@ -567,7 +559,7 @@ namespace ArchpointMvcPHR.Migrations
 
                     b.Property<string>("StreetAddress")
                         .IsRequired()
-                        .HasMaxLength(80);
+                        .HasMaxLength(100);
 
                     b.Property<string>("ZipCode")
                         .IsRequired()
