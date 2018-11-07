@@ -1,18 +1,21 @@
 ﻿<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style>
-        .nav-side-menu {
-            overflow: auto;
-            font-family: verdana;
-            font-size: 14px;
-            font-weight: 200;
-            background-color: #2e353d;
-            position: fixed;
-            top: 0px;
-            width: 300px;
-            height: 100%;
-            color: #e1ffff;
-        }
+    .nav-side-menu {
+        white-space: nowrap;
+        overflow: auto;
+        font-family: verdana;
+        font-size: 14px;
+        font-weight: 200;
+        background-color: #2e353d;
+        position: fixed;
+        top: 0px;
+        width: 300px;
+        height: 100%;
+        color: #e1ffff;
+        padding:10px;
+        margin:0px 120px 0px 0px;
+    }
 
             .nav-side-menu .brand {
                 background-color: #23282e;
@@ -126,7 +129,7 @@
                     transition: all 1s ease;
                 }
 
-        @@media (max-width: 767px) {
+        @@media (max-width: 1750px) {
             .nav-side-menu {
                 position: relative;
                 width: 100%;
@@ -155,14 +158,14 @@
             }
         }
 
-        @@media (min-width: 767px) {
+        @@media (min-width: 1750px) {
             .nav-side-menu .menu-list .menu-content {
                 display: block;
             }
         }
 
         body {
-            margin: 0px;
+            margin-right: 100px;
             padding: 0px;
         }
 </style>
@@ -199,7 +202,7 @@
             <ul id="menu-content" class="menu-content collapse out">
 
                 <li>
-                    <a href="">
+                    <a href="/">
                         <i class="fa fa-home" aria-hidden="true"></i> Home
                     </a>
                 </li>
