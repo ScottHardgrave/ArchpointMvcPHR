@@ -1,0 +1,66 @@
+﻿@model ArchpointMvcPHR.Models.MentalHealthHistory
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MentalHealthHistory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentTreatmentForMentalDisorder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrentTreatmentForMentalDisorder)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MedCareLocationId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedCareLocationId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfTreatment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfTreatment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TreatedInPast)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TreatedInPast)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MentalConditionDisorder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MentalConditionDisorder)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentMedication)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrentMedication)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalProviderId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedicalProviderId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.MentalHealthHistoryid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

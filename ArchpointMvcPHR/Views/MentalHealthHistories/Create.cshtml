@@ -1,0 +1,68 @@
+﻿@model ArchpointMvcPHR.Models.MentalHealthHistory
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>MentalHealthHistory</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CurrentTreatmentForMentalDisorder" class="control-label"></label>
+                <input asp-for="CurrentTreatmentForMentalDisorder" class="form-control" />
+                <span asp-validation-for="CurrentTreatmentForMentalDisorder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MedCareLocationId" class="control-label"></label>
+                <input asp-for="MedCareLocationId" class="form-control" />
+                <span asp-validation-for="MedCareLocationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TypeOfTreatment" class="control-label"></label>
+                <input asp-for="TypeOfTreatment" class="form-control" />
+                <span asp-validation-for="TypeOfTreatment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TreatedInPast" class="control-label"></label>
+                <input asp-for="TreatedInPast" class="form-control" />
+                <span asp-validation-for="TreatedInPast" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MentalConditionDisorder" class="control-label"></label>
+                <input asp-for="MentalConditionDisorder" class="form-control" />
+                <span asp-validation-for="MentalConditionDisorder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentMedication" class="control-label"></label>
+                <input asp-for="CurrentMedication" class="form-control" />
+                <span asp-validation-for="CurrentMedication" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MedicalProviderId" class="control-label"></label>
+                <input asp-for="MedicalProviderId" class="form-control" />
+                <span asp-validation-for="MedicalProviderId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comments" class="control-label"></label>
+                <input asp-for="Comments" class="form-control" />
+                <span asp-validation-for="Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
