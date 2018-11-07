@@ -46,7 +46,7 @@ namespace ArchpointMvcPHR.Models
         public string SocialSecurityNum { get; set; }
 
         [Display(Name = "Street Address")]
-        [StringLength(80, MinimumLength = 1)]
+        [StringLength(100, MinimumLength = 1)]
         [Required]
         public string StreetAddress { get; set; }
 
@@ -61,6 +61,7 @@ namespace ArchpointMvcPHR.Models
 
         [Display(Name = "Zip Code")]
         [StringLength(20, MinimumLength = 1)]
+        [DataType(DataType.PostalCode)]
         [Required]
         public string ZipCode { get; set; }
 

@@ -36,16 +36,17 @@ namespace ArchpointMvcPHR.Models
 
         [Display(Name = "Phone Number")]
         [DataType(DataType.PhoneNumber)]
-        [StringLength(20, MinimumLength = 1)]
+        [StringLength(32, MinimumLength = 1)]
         [Required]
         public string Phone { get; set; }
 
         [Display(Name = "Fax")]
-        [StringLength(40, MinimumLength = 1)]
+        [StringLength(100, MinimumLength = 1)]
         public string Fax { get; set; }
 
         [Display(Name = "Email")]
-        [StringLength(80, MinimumLength = 1)]
+        [StringLength(100, MinimumLength = 1)]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         public string Comments { get; set; }

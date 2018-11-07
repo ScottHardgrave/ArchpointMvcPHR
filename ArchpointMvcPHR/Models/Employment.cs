@@ -11,16 +11,16 @@ namespace ArchpointMvcPHR.Models
         public int Id { get; set; }
 
         [Display(Name = "Name")]
-        [StringLength(60, MinimumLength = 1)]
+        [StringLength(100, MinimumLength = 1)]
         [Required]
         public string EmployerName { get; set; }
 
         [Display(Name = "Street Address")]
-        [StringLength(60, MinimumLength = 1)]
+        [StringLength(100, MinimumLength = 1)]
         [Required]
         public string Address { get; set; }
 
-        [StringLength(60, MinimumLength = 1)]
+        [StringLength(80, MinimumLength = 1)]
         [Required]
         public string City { get; set; }
 
@@ -29,7 +29,8 @@ namespace ArchpointMvcPHR.Models
         public string State { get; set; }
 
         [Display(Name = "Zip/Postal code")]
-        [StringLength(15, MinimumLength = 5)]
+        [StringLength(20, MinimumLength = 1)]
+        [DataType(DataType.PostalCode)]
         [Required]
         public string ZipCode { get; set; }
 
