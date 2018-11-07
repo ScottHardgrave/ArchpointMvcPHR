@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ArchpointMvcPHR.Models.EarNoseThroatHistory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DiseaseDisorder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiagnosisDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateResolved)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicalProviderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedCareLocationId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surgery)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiseaseDisorder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiagnosisDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateResolved)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicalProviderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedCareLocationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surgery)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EarNoseThroatHistoryId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EarNoseThroatHistoryId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EarNoseThroatHistoryId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

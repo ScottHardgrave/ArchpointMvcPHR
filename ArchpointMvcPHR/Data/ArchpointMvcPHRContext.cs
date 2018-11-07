@@ -75,5 +75,15 @@ namespace ArchpointMvcPHR.Models
         public DbSet<ArchpointMvcPHR.Models.MedCareLocation> MedCareLocation { get; set; }
 
         public DbSet<ArchpointMvcPHR.Models.MensHealth> MensHealth { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.CancerHistory> CancerHistory { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.Caregivers> Caregivers { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.EarNoseThroatHistory> EarNoseThroatHistory { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.EyeHistory> EyeHistory { get; set; }
+
+        public DbSet<ArchpointMvcPHR.Models.HeartHistory> HeartHistory { get; set; }
     }
 }

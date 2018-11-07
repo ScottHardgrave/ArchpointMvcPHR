@@ -1,0 +1,119 @@
+﻿@model ArchpointMvcPHR.Models.EyeHistory
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>EyeHistory</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="EyeHistoryId" />
+            <div class="form-group">
+                <label asp-for="DateLastEyeExam" class="control-label"></label>
+                <input asp-for="DateLastEyeExam" class="form-control" />
+                <span asp-validation-for="DateLastEyeExam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateNextEyeExam" class="control-label"></label>
+                <input asp-for="DateNextEyeExam" class="form-control" />
+                <span asp-validation-for="DateNextEyeExam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateLastGlaucomaExam" class="control-label"></label>
+                <input asp-for="DateLastGlaucomaExam" class="form-control" />
+                <span asp-validation-for="DateLastGlaucomaExam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateNextGlaucomaExam" class="control-label"></label>
+                <input asp-for="DateNextGlaucomaExam" class="form-control" />
+                <span asp-validation-for="DateNextGlaucomaExam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MedicalProviderId" class="control-label"></label>
+                <input asp-for="MedicalProviderId" class="form-control" />
+                <span asp-validation-for="MedicalProviderId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Eyeglasses" class="control-label"></label>
+                <input asp-for="Eyeglasses" class="form-control" />
+                <span asp-validation-for="Eyeglasses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactLenses" class="control-label"></label>
+                <input asp-for="ContactLenses" class="form-control" />
+                <span asp-validation-for="ContactLenses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrescriptionDate" class="control-label"></label>
+                <input asp-for="PrescriptionDate" class="form-control" />
+                <span asp-validation-for="PrescriptionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactBrandName" class="control-label"></label>
+                <input asp-for="ContactBrandName" class="form-control" />
+                <span asp-validation-for="ContactBrandName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EyeDiseaseDisorder" class="control-label"></label>
+                <input asp-for="EyeDiseaseDisorder" class="form-control" />
+                <span asp-validation-for="EyeDiseaseDisorder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EyeDiseaseDisorderDiagnosisDate" class="control-label"></label>
+                <input asp-for="EyeDiseaseDisorderDiagnosisDate" class="form-control" />
+                <span asp-validation-for="EyeDiseaseDisorderDiagnosisDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EyeDiseaseDisorderStatus" class="control-label"></label>
+                <input asp-for="EyeDiseaseDisorderStatus" class="form-control" />
+                <span asp-validation-for="EyeDiseaseDisorderStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EyeDiseaseDisorderResolveDate" class="control-label"></label>
+                <input asp-for="EyeDiseaseDisorderResolveDate" class="form-control" />
+                <span asp-validation-for="EyeDiseaseDisorderResolveDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PreviousEyeSurgery" class="control-label"></label>
+                <input asp-for="PreviousEyeSurgery" class="form-control" />
+                <span asp-validation-for="PreviousEyeSurgery" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EyeSurgeryProcedure" class="control-label"></label>
+                <input asp-for="EyeSurgeryProcedure" class="form-control" />
+                <span asp-validation-for="EyeSurgeryProcedure" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EyeSurgeryProcedureDate" class="control-label"></label>
+                <input asp-for="EyeSurgeryProcedureDate" class="form-control" />
+                <span asp-validation-for="EyeSurgeryProcedureDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MedCareLocationId" class="control-label"></label>
+                <input asp-for="MedCareLocationId" class="form-control" />
+                <span asp-validation-for="MedCareLocationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comments" class="control-label"></label>
+                <input asp-for="Comments" class="form-control" />
+                <span asp-validation-for="Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

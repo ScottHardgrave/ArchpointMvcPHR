@@ -1,0 +1,137 @@
+﻿@model IEnumerable<ArchpointMvcPHR.Models.EyeHistory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DateLastEyeExam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateNextEyeExam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateLastGlaucomaExam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateNextGlaucomaExam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicalProviderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eyeglasses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactLenses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrescriptionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactBrandName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EyeDiseaseDisorder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EyeDiseaseDisorderDiagnosisDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EyeDiseaseDisorderStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EyeDiseaseDisorderResolveDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PreviousEyeSurgery)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EyeSurgeryProcedure)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EyeSurgeryProcedureDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedCareLocationId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comments)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateLastEyeExam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateNextEyeExam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateLastGlaucomaExam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateNextGlaucomaExam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicalProviderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eyeglasses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactLenses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrescriptionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactBrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EyeDiseaseDisorder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EyeDiseaseDisorderDiagnosisDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EyeDiseaseDisorderStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EyeDiseaseDisorderResolveDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PreviousEyeSurgery)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EyeSurgeryProcedure)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EyeSurgeryProcedureDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedCareLocationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comments)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EyeHistoryId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EyeHistoryId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EyeHistoryId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

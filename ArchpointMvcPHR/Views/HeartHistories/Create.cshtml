@@ -1,0 +1,58 @@
+﻿@model ArchpointMvcPHR.Models.HeartHistory
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>HeartHistory</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MedicalProviderId" class="control-label"></label>
+                <input asp-for="MedicalProviderId" class="form-control" />
+                <span asp-validation-for="MedicalProviderId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HeartDiseaseDisorder" class="control-label"></label>
+                <input asp-for="HeartDiseaseDisorder" class="form-control" />
+                <span asp-validation-for="HeartDiseaseDisorder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiagnosisDate" class="control-label"></label>
+                <input asp-for="DiagnosisDate" class="form-control" />
+                <span asp-validation-for="DiagnosisDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiagnosisStatus" class="control-label"></label>
+                <input asp-for="DiagnosisStatus" class="form-control" />
+                <span asp-validation-for="DiagnosisStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateResolved" class="control-label"></label>
+                <input asp-for="DateResolved" class="form-control" />
+                <span asp-validation-for="DateResolved" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comments" class="control-label"></label>
+                <input asp-for="Comments" class="form-control" />
+                <span asp-validation-for="Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

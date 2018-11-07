@@ -1,0 +1,75 @@
+﻿@model ArchpointMvcPHR.Models.CancerHistory
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CancerHistory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MedProviderId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedProviderId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfCancerTumor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfCancerTumor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DiagnosisDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DiagnosisDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgeAtDiagnosis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AgeAtDiagnosis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StageOfCancerTumor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StageOfCancerTumor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MedCareLocationId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedCareLocationId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TreatmentReceived)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TreatmentReceived)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TreatmentDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TreatmentDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CancerHistoryId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

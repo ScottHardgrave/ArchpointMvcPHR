@@ -1,0 +1,83 @@
+﻿@model IEnumerable<ArchpointMvcPHR.Models.CancerHistory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MedProviderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TypeOfCancerTumor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiagnosisDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgeAtDiagnosis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StageOfCancerTumor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedCareLocationId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TreatmentReceived)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TreatmentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comments)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedProviderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeOfCancerTumor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiagnosisDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgeAtDiagnosis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StageOfCancerTumor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedCareLocationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TreatmentReceived)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TreatmentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comments)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CancerHistoryId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CancerHistoryId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CancerHistoryId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

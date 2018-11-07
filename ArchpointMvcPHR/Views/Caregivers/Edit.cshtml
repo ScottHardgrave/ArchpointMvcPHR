@@ -1,0 +1,94 @@
+﻿@model ArchpointMvcPHR.Models.Caregivers
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Caregivers</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CaregiversId" />
+            <div class="form-group">
+                <label asp-for="PatientFirstName" class="control-label"></label>
+                <input asp-for="PatientFirstName" class="form-control" />
+                <span asp-validation-for="PatientFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatientMiddleInitial" class="control-label"></label>
+                <input asp-for="PatientMiddleInitial" class="form-control" />
+                <span asp-validation-for="PatientMiddleInitial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="patientLastName" class="control-label"></label>
+                <input asp-for="patientLastName" class="form-control" />
+                <span asp-validation-for="patientLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RelationshipToPatient" class="control-label"></label>
+                <input asp-for="RelationshipToPatient" class="form-control" />
+                <span asp-validation-for="RelationshipToPatient" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StreetAddress" class="control-label"></label>
+                <input asp-for="StreetAddress" class="form-control" />
+                <span asp-validation-for="StreetAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StateProvince" class="control-label"></label>
+                <input asp-for="StateProvince" class="form-control" />
+                <span asp-validation-for="StateProvince" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ZipCode" class="control-label"></label>
+                <input asp-for="ZipCode" class="form-control" />
+                <span asp-validation-for="ZipCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EveningPhone" class="control-label"></label>
+                <input asp-for="EveningPhone" class="form-control" />
+                <span asp-validation-for="EveningPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CellPhone" class="control-label"></label>
+                <input asp-for="CellPhone" class="form-control" />
+                <span asp-validation-for="CellPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatientCurrentlyInNursingFacility" class="control-label"></label>
+                <input asp-for="PatientCurrentlyInNursingFacility" class="form-control" />
+                <span asp-validation-for="PatientCurrentlyInNursingFacility" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,126 @@
+﻿@model ArchpointMvcPHR.Models.EyeHistory
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EyeHistory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DateLastEyeExam)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateLastEyeExam)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateNextEyeExam)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateNextEyeExam)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateLastGlaucomaExam)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateLastGlaucomaExam)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateNextGlaucomaExam)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateNextGlaucomaExam)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalProviderId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedicalProviderId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Eyeglasses)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Eyeglasses)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactLenses)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContactLenses)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrescriptionDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrescriptionDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactBrandName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContactBrandName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EyeDiseaseDisorder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EyeDiseaseDisorder)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EyeDiseaseDisorderDiagnosisDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EyeDiseaseDisorderDiagnosisDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EyeDiseaseDisorderStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EyeDiseaseDisorderStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EyeDiseaseDisorderResolveDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EyeDiseaseDisorderResolveDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousEyeSurgery)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PreviousEyeSurgery)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EyeSurgeryProcedure)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EyeSurgeryProcedure)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EyeSurgeryProcedureDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EyeSurgeryProcedureDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MedCareLocationId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedCareLocationId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.EyeHistoryId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

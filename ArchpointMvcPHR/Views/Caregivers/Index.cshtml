@@ -1,0 +1,107 @@
+﻿@model IEnumerable<ArchpointMvcPHR.Models.Caregivers>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientMiddleInitial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.patientLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RelationshipToPatient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StreetAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StateProvince)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZipCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EveningPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CellPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientCurrentlyInNursingFacility)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientMiddleInitial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.patientLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RelationshipToPatient)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StreetAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StateProvince)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZipCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EveningPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CellPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientCurrentlyInNursingFacility)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CaregiversId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CaregiversId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CaregiversId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

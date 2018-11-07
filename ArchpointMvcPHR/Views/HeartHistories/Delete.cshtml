@@ -1,0 +1,57 @@
+﻿@model ArchpointMvcPHR.Models.HeartHistory
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>HeartHistory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalProviderId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedicalProviderId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HeartDiseaseDisorder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HeartDiseaseDisorder)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DiagnosisDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DiagnosisDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DiagnosisStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DiagnosisStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateResolved)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateResolved)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="HeartHistoryId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
