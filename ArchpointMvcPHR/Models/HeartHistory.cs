@@ -13,20 +13,24 @@ namespace ArchpointMvcPHR.Models
         [Required]
         public int MedicalProviderId { get; set; }
 
+        [Display(Name = "Heart Disease/Disorder")]
         [StringLength(100, MinimumLength = 1)]
         [DataType(DataType.Text)]
         [Required]
         public string HeartDiseaseDisorder { get; set; }
 
+        [Display(Name = "Diagnosis Date")]
         [DataType(DataType.Date)]
         [Required]
         public DateTime DiagnosisDate { get; set; }
 
+        [Display(Name = "Status")]
         [StringLength(80, MinimumLength = 1)]
         [DataType(DataType.Text)]
         [Required]
         public string DiagnosisStatus { get; set; }
 
+        [Display(Name = "Date Resolved")]
         [DataType(DataType.Date)]
         public DateTime DateResolved { get; set; }
 

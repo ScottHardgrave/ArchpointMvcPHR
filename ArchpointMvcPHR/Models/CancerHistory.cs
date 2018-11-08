@@ -10,23 +10,28 @@ namespace ArchpointMvcPHR.Models
     {
         public int CancerHistoryId {get; set;}
 
+        [Display(Name = "Medical Provider")]
         [Required]
-        public string MedProviderId { get; set; }
+        public int MedProviderId { get; set; }
 
+        [Display(Name = "Type of Cancer/Tumor")]
         [StringLength(60, MinimumLength = 1)]
         [Required]
         [DataType(DataType.Text)]
         public string TypeOfCancerTumor { get; set; }
 
+        [Display(Name = "Date of Diagnosis")]
         [Required]
         [DataType(DataType.Date)]
         public DateTime DiagnosisDate { get; set; }
 
+        [Display(Name = "Age at Diagnosis")]
         [StringLength(3, MinimumLength = 1)]
         [Required]
         [DataType(DataType.Text)]
         public string AgeAtDiagnosis { get; set; }
 
+        [Display(Name = "Stage of Cancer/Tumor")]
         [StringLength(20, MinimumLength = 1)]
         [Required]
         [DataType(DataType.Text)]
@@ -35,12 +40,13 @@ namespace ArchpointMvcPHR.Models
         [Required]
         public string MedCareLocationId { get; set; }
 
+        [Display(Name = "Treatment Received")]
         [StringLength(255, MinimumLength = 1)]
         [Required]
         [DataType(DataType.Text)]
         public string TreatmentReceived { get; set; }
 
-
+        [Display(Name = "Treatment Date")]
         [Required]
         [DataType(DataType.Date)]
         public DateTime TreatmentDate { get; set; }

@@ -10,20 +10,24 @@ namespace ArchpointMvcPHR.Models
     {
         public int EarNoseThroatHistoryId { get; set; }
 
+        [Display(Name = "Disease/Disorder")]
         [StringLength(60, MinimumLength = 1)]
         [Required]
         [DataType(DataType.Text)]
         public string DiseaseDisorder { get; set; }
 
+        [Display(Name = "Date of diagnosis")]
         [DataType(DataType.Date)]
         [Required]
         public DateTime DiagnosisDate { get; set; }
 
+        [Display(Name = "Current status")]
         [StringLength(60, MinimumLength = 1)]
         [Required]
         [DataType(DataType.Text)]
         public string CurrentStatus { get; set; }
 
+        [Display(Name = "Date resolved")]
         [DataType(DataType.Date)]
         public DateTime DateResolved { get; set; }
 
