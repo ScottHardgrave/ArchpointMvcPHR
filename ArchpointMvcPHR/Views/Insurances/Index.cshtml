@@ -5,18 +5,12 @@
 }
 
 
-<style>
-    .table {
-        margin-left: 15%;
-    }
-</style>
-<center>
+
     <h2>Insurance</h2>
 
     <p>
         <a asp-action="Create">Create New</a>
     </p>
-    </center>
 
     <table class="table">
         <thead>
@@ -55,35 +49,34 @@
                     @Html.DisplayNameFor(model => model.AuthorizationPhoneNum)
                 </th>
                 
-    <th>
-        @Html.DisplayNameFor(model => model.MedicareClaimNum)
-    </th>
-    <th>
-        @Html.DisplayNameFor(model => model.MedicaidClaimNum)
-    </th>
-    <th>
-        @Html.DisplayNameFor(model => model.MedicareMedicaidEffectiveDate)
-    </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MedicareClaimNum)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MedicaidClaimNum)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MedicareMedicaidEffectiveDate)
+                </th>
 
-    <th>
-        @Html.DisplayNameFor(model => model.PolicyHolderFirstName)
-    </th>
-    <th>
-        @Html.DisplayNameFor(model => model.PolicyHolderMidInit)
-    </th>
-    <th>
-        @Html.DisplayNameFor(model => model.PolicyHolderLastName)
-    </th>
-    <th>
-        @Html.DisplayNameFor(model => model.RelationshipToPolicyHolder)
-    </th>
-    <th>
-        @Html.DisplayNameFor(model => model.DateOfBirth)
-    </th>
-    <th>
-        @Html.DisplayNameFor(model => model.SocialSecurityNo)
-    </th>
-    <th></th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PolicyHolderFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PolicyHolderMidInit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PolicyHolderLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RelationshipToPolicyHolder)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateOfBirth)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SocialSecurityNo)
+                </th>
         
             </tr>
         </thead>
