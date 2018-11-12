@@ -1,5 +1,23 @@
 ﻿<!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>@ViewData["Title"] - ArchPoint Personal Health Records</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
 <style>
     .nav-side-menu {
         white-space: nowrap;
@@ -180,39 +198,19 @@ body {
         font-size:24px;
     }
 </style>
-<html>
-<head>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <meta charset="utf-8" />
-    <title>@ViewData["Title"] - Archpoint PHR</title>
-
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
 </head>
+<html>
+
 <body>
 
 
     <div class="nav-side-menu">
-        <div class="brand">ArchPoint PHR</div>
+        <div class="brand">Health Records</div>
         <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
         <div class="menu-list">
 
             <ul id="menu-content" class="menu-content collapse out">
-
-
 
                 <li>
                     <a href="/">
@@ -221,7 +219,7 @@ body {
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="/CreateNewHealthRecord">
                         <i class="fa fa-folder-open-o" aria-hidden="true"></i>Create New Health Record
                     </a>
                 </li>
@@ -239,13 +237,13 @@ body {
                     <li><a asp-area="" asp-controller="HeartHistories">Heart History</a></li>
                     <li><a asp-area="" asp-controller="MedicalHistories">Medical History</a></li>
                     <li><a asp-area="" asp-controller="Medications">Medication History</a></li>
-                    <li><a asp-area="" asp-controller="MensHealth">Mens Health History</a></li>
-                    <li><a asp-area="" asp-controller="MentalHealthHistories">Mental Health Status</a></li>
+                    <li><a asp-area="" asp-controller="MensHealth">Men's Health History</a></li>                 
+                    <li><a asp-area="" asp-controller="MentalHealthHistories">Mental Health Status</a></li>             
                     <li><a asp-area="" asp-controller="SurgicalHistories">Surgical History</a></li>
                     <li><a asp-area="" asp-controller="StdHistories">STD History</a></li>
-                    <li><a asp-area="" asp-controller="WomensHealthHistories">Womens Health History</a></li>
-                </ul>
+                    <li><a asp-area="" asp-controller="WomensHealthHistories">Women's Health History</a></li>
 
+                </ul>
 
 
                 <li data-toggle="collapse" data-target="#risks" class="collapsed">
@@ -263,10 +261,13 @@ body {
                     <li><a asp-area="" asp-controller="ExerciseActivityRisks">Exercise/Activity Risks</a></li>
                     <li><a asp-area="" asp-controller="SmokingHistoryRisks">Smoking Risks</a></li>
                     <li><a asp-area="" asp-controller="WeightAndMeasurementRisks">Weight and Measurement Risks</a></li>
+
+
                 </ul>
 
+
                 <li>
-                    <a href="">
+                    <a href="/EmergencyMedCard">
                         <i class="fa fa-credit-card" aria-hidden="true"></i> Medical Quick Card
                     </a>
                 </li>
@@ -307,6 +308,9 @@ body {
                     <partial name="_LoginPartial" />
 
                 </li>
+
+
+
 
             </ul>
         </div>
