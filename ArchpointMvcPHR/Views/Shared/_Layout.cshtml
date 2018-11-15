@@ -20,7 +20,6 @@
     </environment>
 <style>
     .nav-side-menu {
-        white-space: nowrap;
         overflow: auto;
         font-family: verdana;
         font-size: 14px;
@@ -32,6 +31,7 @@
         height: 100%;
         color: #e1ffff;
         padding:4px 7px 2px 4px;
+        margin-left:auto;
     }
 
 .nav-side-menu .brand {
@@ -186,14 +186,13 @@ body {
         }
 .body1{
     margin-left:315px;
+    margin-right:15%;
+
 }
     .login {
         font-family: FontAwesome;
-        content: "\f078";
-        display: inline-block;
         padding-left: 10px;
         padding-right: 10px;
-        vertical-align: middle;
         float: left;
         font-size:24px;
     }
@@ -202,117 +201,119 @@ body {
 <html>
 
 <body>
-
+    <header>
+        
+    </header>
 
     <div class="nav-side-menu">
         <div class="brand">Health Records</div>
         <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
         <div class="menu-list">
+            <form>
+                <ul id="menu-content" class="menu-content collapse out">
 
-            <ul id="menu-content" class="menu-content collapse out">
+                    <li class="login">
+                        <partial name="_LoginPartial" />
 
-                <li>
-                    <a href="/">
-                        <i class="fa fa-home" aria-hidden="true"></i> Home
-                    </a>
-                </li>
+                    </li>
+                    <br />
+                    <br />
 
-                <li>
-                    <a href="/CreateNewHealthRecord">
-                        <i class="fa fa-folder-open-o" aria-hidden="true"></i>Create New Health Record
-                    </a>
-                </li>
+                    <li>
+                        <a href="/">
+                            <i class="fa fa-home" aria-hidden="true"></i> Home
+                        </a>
+                    </li>
 
-                <li data-toggle="collapse" data-target="#products" class="collapsed active">
-                    <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i> Medical History <span class="arrow"></span></a>
-                </li>
+                    <li>
+                        <a href="/CreateNewHealthRecord">
+                            <i class="fa fa-folder-open-o" aria-hidden="true"></i>Create New Health Record
+                        </a>
+                    </li>
 
-                <ul class="sub-menu collapse" id="products">
-                    <li><a asp-area="" asp-controller="AllergyHistories">Allergy History</a></li>
-                    <li><a asp-area="" asp-controller="CancerHistories">Cancer History</a></li>
-                    <li><a asp-area="" asp-controller="EarNoseThroatHistories">ENT History</a></li>
-                    <li><a asp-area="" asp-controller="EyeHistories">Eye History</a></li>
-                    <li><a asp-area="" asp-controller="FamilyHistory">Family History</a></li>
-                    <li><a asp-area="" asp-controller="HeartHistories">Heart History</a></li>
-                    <li><a asp-area="" asp-controller="MedicalHistories">Medical History</a></li>
-                    <li><a asp-area="" asp-controller="Medications">Medication History</a></li>
-                    <li><a asp-area="" asp-controller="MensHealth">Men's Health History</a></li>                 
-                    <li><a asp-area="" asp-controller="MentalHealthHistories">Mental Health Status</a></li>             
-                    <li><a asp-area="" asp-controller="SurgicalHistories">Surgical History</a></li>
-                    <li><a asp-area="" asp-controller="StdHistories">STD History</a></li>
-                    <li><a asp-area="" asp-controller="WomensHealthHistories">Women's Health History</a></li>
+                    <li data-toggle="collapse" data-target="#products" class="collapsed active">
+                        <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i> Medical History <span class="arrow"></span></a>
+                    </li>
+
+                    <ul class="sub-menu collapse" id="products">
+                        <li><a asp-area="" asp-controller="AllergyHistories">Allergy History</a></li>
+                        <li><a asp-area="" asp-controller="CancerHistories">Cancer History</a></li>
+                        <li><a asp-area="" asp-controller="EarNoseThroatHistories">ENT History</a></li>
+                        <li><a asp-area="" asp-controller="EyeHistories">Eye History</a></li>
+                        <li><a asp-area="" asp-controller="FamilyHistory">Family History</a></li>
+                        <li><a asp-area="" asp-controller="HeartHistories">Heart History</a></li>
+                        <li><a asp-area="" asp-controller="MedicalHistories">Medical History</a></li>
+                        <li><a asp-area="" asp-controller="Medications">Medication History</a></li>
+                        <li><a asp-area="" asp-controller="MensHealth">Men's Health History</a></li>
+                        <li><a asp-area="" asp-controller="MentalHealthHistories">Mental Health Status</a></li>
+                        <li><a asp-area="" asp-controller="SurgicalHistories">Surgical History</a></li>
+                        <li><a asp-area="" asp-controller="StdHistories">STD History</a></li>
+                        <li><a asp-area="" asp-controller="WomensHealthHistories">Women's Health History</a></li>
+
+                    </ul>
+
+
+                    <li data-toggle="collapse" data-target="#risks" class="collapsed">
+                        <a href="#"> <i class="fa glyphicon-warning-sign" aria-hidden="true"></i>Medical Risks<span class="arrow"></span></a>
+                    </li>
+                    <ul class="sub-menu collapse" id="risks">
+                        <li><a asp-area="" asp-controller="A1CTestRisk">A1C Test Risks</a></li>
+                        <li><a asp-area="" asp-controller="AlcoholRisks">Alcohol Risks</a></li>
+                        <li><a asp-area="" asp-controller="AllergyHistories">Allergy Risks</a></li>
+                        <li><a asp-area="" asp-controller="AsthmaRisks">Asthma Risks</a></li>
+                        <li><a asp-area="" asp-controller="BloodPressureRisks">Blood Pressure Risks</a></li>
+                        <li><a asp-area="" asp-controller="CholesterolRisks">Cholesterol Risks</a></li>
+                        <li><a asp-area="" asp-controller="DiabetesRisks">Diabetes Risks</a></li>
+                        <li><a asp-area="" asp-controller="DrugUseRisks">Drug Risks</a></li>
+                        <li><a asp-area="" asp-controller="ExerciseActivityRisks">Exercise/Activity Risks</a></li>
+                        <li><a asp-area="" asp-controller="SmokingHistoryRisks">Smoking Risks</a></li>
+                        <li><a asp-area="" asp-controller="WeightAndMeasurementRisks">Weight and Measurement Risks</a></li>
+
+
+                    </ul>
+
+
+                    <li>
+                        <a href="/EmergencyMedCard">
+                            <i class="fa fa-credit-card" aria-hidden="true"></i> Medical Quick Card
+                        </a>
+                    </li>
+
+                    <li data-toggle="collapse" data-target="#service" class="collapsed">
+                        <a href="#"> <i class="fa fa-users" aria-hidden="true"></i> User Information <span class="arrow"></span></a>
+                    </li>
+                    <ul class="sub-menu collapse" id="service">
+                        <li><a asp-area="" asp-controller="PersonalInfoes">Personal Information</a></li>
+                        <li><a asp-area="" asp-controller="Caregivers">Caregivers</a></li>
+                        <li><a asp-area="" asp-controller="DoctorAppointments">Doctor Visits</a></li>
+                        <li><a asp-area="" asp-controller="Insurances">Insurance Information</a></li>
+                        <li><a asp-area="" asp-controller="Immunizations">Immunizations</a></li>
+                        <li><a asp-area="" asp-controller="LegalDocuments">Legal Documents</a></li>
+                        <li><a asp-area="" asp-controller="MedicalProviders">Medical Provider</a></li>
+                        <li><a asp-area="" asp-controller="TravelHealths">Travel Health</a></li>
+                    </ul>
+
+                    <li>
+                        <a href="/AboutUs">
+                            <i class="fa fa-list" aria-hidden="true"></i> About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/Contact">
+                            <i class="fa fa-phone-square" aria-hidden="true"></i> Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <i class="fa fa-phone-square" aria-hidden="true"></i> Feedback
+                        </a>
+                    </li>
 
                 </ul>
-
-
-                <li data-toggle="collapse" data-target="#risks" class="collapsed">
-                    <a href="#"> <i class="fa glyphicon-warning-sign" aria-hidden="true"></i>Medical Risks<span class="arrow"></span></a>
-                </li>
-                <ul class="sub-menu collapse" id="risks">
-                    <li><a asp-area="" asp-controller="A1CTestRisk">A1C Test Risks</a></li>
-                    <li><a asp-area="" asp-controller="AlcoholRisks">Alcohol Risks</a></li>
-                    <li><a asp-area="" asp-controller="AllergyHistories">Allergy Risks</a></li>
-                    <li><a asp-area="" asp-controller="AsthmaRisks">Asthma Risks</a></li>
-                    <li><a asp-area="" asp-controller="BloodPressureRisks">Blood Pressure Risks</a></li>
-                    <li><a asp-area="" asp-controller="CholesterolRisks">Cholesterol Risks</a></li>
-                    <li><a asp-area="" asp-controller="DiabetesRisks">Diabetes Risks</a></li>
-                    <li><a asp-area="" asp-controller="DrugUseRisks">Drug Risks</a></li>
-                    <li><a asp-area="" asp-controller="ExerciseActivityRisks">Exercise/Activity Risks</a></li>
-                    <li><a asp-area="" asp-controller="SmokingHistoryRisks">Smoking Risks</a></li>
-                    <li><a asp-area="" asp-controller="WeightAndMeasurementRisks">Weight and Measurement Risks</a></li>
-
-
-                </ul>
-
-
-                <li>
-                    <a href="/EmergencyMedCard">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i> Medical Quick Card
-                    </a>
-                </li>
-
-                <li data-toggle="collapse" data-target="#service" class="collapsed">
-                    <a href="#"> <i class="fa fa-users" aria-hidden="true"></i> User Information <span class="arrow"></span></a>
-                </li>
-                <ul class="sub-menu collapse" id="service">
-                    <li><a asp-area="" asp-controller="PersonalInfoes">Personal Information</a></li>
-                    <li><a asp-area="" asp-controller="Caregivers">Caregivers</a></li>
-                    <li><a asp-area="" asp-controller="DoctorAppointments">Doctor Visits</a></li>
-                    <li><a asp-area="" asp-controller="Insurances">Insurance Information</a></li>
-                    <li><a asp-area="" asp-controller="Immunizations">Immunizations</a></li>
-                    <li><a asp-area="" asp-controller="LegalDocuments">Legal Documents</a></li>
-                    <li><a asp-area="" asp-controller="MedicalProviders">Medical Provider</a></li>
-                    <li><a asp-area="" asp-controller="TravelHealths">Travel Health</a></li>
-                </ul>
-
-                <li>
-                    <a href="/AboutUs">
-                        <i class="fa fa-list" aria-hidden="true"></i> About
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/Contact">
-                        <i class="fa fa-phone-square" aria-hidden="true"></i> Contact
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <i class="fa fa-phone-square" aria-hidden="true"></i> Feedback
-                    </a>
-                </li>
-
-                <li class="login">
-                    <partial name="_LoginPartial" />
-
-                </li>
-
-
-
-
-            </ul>
+            </form>
         </div>
     </div>
 
