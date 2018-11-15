@@ -5,8 +5,24 @@
     ViewData["Title"] = "Medical Card";
 }
 
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully.....................................................................................................................................";
+?>
+
 
 <h2>Emergency Medical Card</h2>
+
 
 <div class="container">
     <h2>Medical Quick Card</h2>
@@ -14,7 +30,7 @@
     <div class="table-responsive">
         <table class="table">
             <tr>
-                    <h3>Name:</h3>
+                <h3>Name:</h3>
             </tr>
             <tr>
                 <th>Personal Info</th>
@@ -60,23 +76,21 @@
             </tr>
 
 
-
-
             <tr>
                 <th>Current Medications</th>
                 <th>Legal</th>
             </tr>
             <tr>
                 <td>Medication Name:</td>
-                <td>Living Will?:</td>
+                <td>Living Will?: <input type="radio" name="will" value="No" checked> NO  <input type="radio" name="will" value="yes"> YES</td> </td>
             </tr>
             <tr>
                 <td>Medication Dosage:</td>
-                <td>DNR:</td>
+                <td>DNR: <input type="radio" name="DNR" value="No" checked> NO  <input type="radio" name="DNR" value="yes"> YES</td>
             </tr>
             <tr>
                 <td>Medication Prevalence:</td>
-                <td>Organ Donor?:</td>
+                <td>Organ Donor?: <input type="radio" name="organ" value="No" checked> NO  <input type="radio" name="organ" value="yes"> YES</td>
             </tr>
         </table>
     </div>
