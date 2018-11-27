@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ArchpointMvcPHR.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ArchpointMvcPHR.Controllers
 {
+    [Microsoft.AspNetCore.Authorization.Authorize]
     public class AsthmaRisksController : Controller
     {
         private readonly ArchpointMvcPHRContext _context;

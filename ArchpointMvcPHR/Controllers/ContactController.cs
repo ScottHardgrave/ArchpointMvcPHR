@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ArchpointMvcPHR.Controllers
 {
+    [Microsoft.AspNetCore.Authorization.AllowAnonymous]
     public class ContactController : Controller
     {
         public IActionResult Index()

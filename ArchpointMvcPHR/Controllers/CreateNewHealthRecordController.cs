@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ArchpointMvcPHR.Controllers
 {
+    [Microsoft.AspNetCore.Authorization.Authorize]
     public class CreateNewHealthRecordController : Controller
     {
         // GET: CreateNewHealthRecord

@@ -9,6 +9,7 @@ using ArchpointMvcPHR.Models;
 
 namespace ArchpointMvcPHR.Controllers
 {
+    [Microsoft.AspNetCore.Authorization.Authorize]
     public class CholesterolRisksController : Controller
     {
         private readonly ArchpointMvcPHRContext _context;

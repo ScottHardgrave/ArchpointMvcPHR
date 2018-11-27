@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 
 namespace ArchpointMvcPHR.Areas.Identity.Pages.Account
 {
+
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {

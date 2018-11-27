@@ -9,6 +9,7 @@ using ArchpointMvcPHR.Models;
 
 namespace ArchpointMvcPHR.Controllers
 {
+    [Microsoft.AspNetCore.Authorization.Authorize]
     public class A1CTestRiskController : Controller
     {
         private readonly ArchpointMvcPHRContext _context;

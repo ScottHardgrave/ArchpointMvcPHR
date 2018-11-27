@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ArchpointMvcPHR.Controllers
 {
+    [Microsoft.AspNetCore.Authorization.Authorize]
     public class EmergencyMedCardController : Controller
     {
         public IActionResult Index()

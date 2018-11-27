@@ -8,6 +8,7 @@ using ArchpointMvcPHR.Models;
 
 namespace ArchpointMvcPHR.Controllers
 {
+    [Microsoft.AspNetCore.Authorization.AllowAnonymous]
     public class HomeController : Controller
     {
         public IActionResult Index()
