@@ -5,36 +5,21 @@
     ViewData["Title"] = "Medical Card";
 }
 
-<?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password);
-
-// Check connection
-if (!$conn) {
-die("Connection failed: " . mysqli_connect_error());
-}
-echo "Connected successfully.....................................................................................................................................";
-?>
-
-
 <h2>Emergency Medical Card</h2>
 
 
 <div class="container">
     <h2>Medical Quick Card</h2>
-    <p>This card is meant to be printed out and kept in your wallet to be keep al your vital information in one spot in the case of emergency</p>
+    <p>This card is meant to be printed out and kept in your wallet at all times in case of emergency.</p>
     <div class="table-responsive">
         <table class="table">
             <tr>
-                <h3>Name:</h3>
+                <h3>Emergency Medical Card:</h3>
             </tr>
             <tr>
-                <th>Personal Info</th>
-                <th>Allergies/Reactions</th>
+                <td>First Name:</td>
+                <td>M.I.:</td>
+                <td>Last Name:</td>
             </tr>
             <tr>
                 <td>DOB:</td>
