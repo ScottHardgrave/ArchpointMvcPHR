@@ -32,24 +32,7 @@ namespace ArchpointMvcPHR.Areas.Identity.Pages.Account
             _logger = logger;
             _emailSender = emailSender;
         }
-    [AllowAnonymous]
-    public class LogoutModel : PageModel
-    {
-            private readonly SignInManager<IdentityUser> _signInManager;
-            private readonly ILogger<LogoutModel> _logger;
-
-            public LogoutModel(SignInManager<IdentityUser> signInManager, ILogger<LogoutModel> logger)
-            {
-                _signInManager = signInManager;
-                _logger = logger;
-            }
-
-            public void OnGet()
-            {
-            }
-
-
-        [BindProperty]
+       [BindProperty]
         public InputModel Input { get; set; }
 
         public string ReturnUrl { get; set; }
@@ -77,6 +60,22 @@ namespace ArchpointMvcPHR.Areas.Identity.Pages.Account
         {
             ReturnUrl = returnUrl;
         }
+
+        [AllowAnonymous]
+        public class LogoutModel : PageModel
+        {
+            private readonly SignInManager<IdentityUser> _signInManager;
+            private readonly ILogger<LogoutModel> _logger;
+
+            public LogoutModel(SignInManager<IdentityUser> signInManager, ILogger<LogoutModel> logger)
+            {
+                _signInManager = signInManager;
+                _logger = logger;
+            }
+
+            public void OnGet()
+            {
+            }
 
             public async Task<IActionResult> OnPost(string returnUrl = null)
             {
