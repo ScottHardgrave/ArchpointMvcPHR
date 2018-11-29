@@ -28,7 +28,7 @@ namespace ArchpointMvcPHR.Models
         [DataType(DataType.Text)]
         public string InsectStingBites { get; set; }
 
-        [Display(Name = "Airborns/Inhaled Allergen")]
+        [Display(Name = "Airborne Inhaled Allergen")]
         [StringLength(80, MinimumLength = 1)]
         [Required]
         [DataType(DataType.Text)]
