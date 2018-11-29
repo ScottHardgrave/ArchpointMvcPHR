@@ -10,8 +10,8 @@
 <div class="container">
     <h2>Create New Health Record Completion %</h2>
     <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-            60%
+        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+            50%
         </div>
     </div>
 </div>
@@ -55,7 +55,8 @@
                 <span asp-validation-for="PhoneNum" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Next Step - Medical Provider" class="btn btn-primary" />
+                @*<input type="submit" value="Next Step - Medical Provider" class="btn btn-primary" />*@
+                <a class="btn btn-primary" href="/CNHRMedicalProviders/Create" role="button">Next Step - Medical Providers</a>
             </div>
         </form>
     </div>

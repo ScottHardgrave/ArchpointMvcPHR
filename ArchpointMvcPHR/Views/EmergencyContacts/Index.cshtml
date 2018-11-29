@@ -21,12 +21,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.RelationshipToPatient)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.HomePhone)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.EveningPhone)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.CellPhone)
             </th>
@@ -63,12 +63,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.RelationshipToPatient)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.HomePhone)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.EveningPhone)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.CellPhone)
             </td>
@@ -91,8 +91,8 @@
                 @Html.DisplayFor(modelItem => item.EmerContactCountry)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
