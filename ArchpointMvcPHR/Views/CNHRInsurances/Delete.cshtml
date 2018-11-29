@@ -1,0 +1,141 @@
+﻿@model ArchpointMvcPHR.Models.Insurance
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Insurance</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryOrSecondary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryOrSecondary)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InsuranceName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InsuranceName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InsurancePhoneNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InsurancePhoneNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InsuranceStreetAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InsuranceStreetAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InsuranceCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InsuranceCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InsuranceState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InsuranceState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InsuranceCountry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InsuranceCountry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PolicyIdNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PolicyIdNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GroupNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PlanEffectiveDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PlanEffectiveDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorizationPhoneNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AuthorizationPhoneNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicareClaimNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedicareClaimNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicaidClaimNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedicaidClaimNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicareMedicaidEffectiveDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MedicareMedicaidEffectiveDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PolicyHolderFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PolicyHolderFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PolicyHolderMidInit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PolicyHolderMidInit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PolicyHolderLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PolicyHolderLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RelationshipToPolicyHolder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RelationshipToPolicyHolder)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SocialSecurityNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SocialSecurityNo)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
